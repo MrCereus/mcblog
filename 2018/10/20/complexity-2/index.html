@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title> [Geek笔记]复杂度分析（二）：一些栗子		 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" [Geek笔记]复杂度分析（二）：一些栗子		">
+<meta property="og:url" content="http://yoursite.com/2018/10/20/complexity-2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-29T15:55:07.175Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" [Geek笔记]复杂度分析（二）：一些栗子		">
+<meta name="twitter:description" content="上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-complexity-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/20/complexity-2/" class="article-date">
+  <time datetime="2018-10-20T03:34:51.000Z" itemprop="datePublished">2018-10-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Geek笔记/">Geek笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+       [Geek笔记]复杂度分析（二）：一些栗子		
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面看看几种常见的多项式时间复杂度。 1.O(1) 这里的”1”指的不是只有一行代码，而是理解成随着n的增大，每个语句所只执行1次。例如：</p>
+<p>int i = 8;<br>int j = 6;<br>int sum = i + j;</p>
+<p>这里有三行代码，但它的时间复杂度仍然是O(1)，不是O(3)。也就是说，无论n是1000、10000、甚至是更大，它的时间复杂度仍然是O(1)而不是O(n)。一般来说，只要算法中不存在循环、递归，其时间复杂度就是O(1)。 2.O(logn)、O(nlogn) 还是举个栗子：</p>
+<p>i=1;<br>while (i &lt;= n)  {<br>    i = i * 2;<br>}</p>
+<p>很容易发现，第三行代码被执行的次数最多，只要知道这段代码被执行了多少次，就能知道时间复杂度了。事实上，这段代码的意思就是求出k个2相乘，然后当结果大于n的时候结束循环。所以，k=log₂n的。而对数之间是可以相互转换的，我们就忽略掉对数的底，全部写成O(logn)。 那么根据乘法原则，把上面这段代码循环n次，时间复杂度就变成了O(nlogn)。归并排序、快速排序的复杂度都是这个。 3.O(m+n)、O(m*n) 看一段和之前不太一样的代码：</p>
+<p>int cal(int m, int n) {<br>    int sum_1 = 0;<br>    int i = 1;<br>    for (; i &lt; m; ++i) {<br>        sum_1 = sum_1 + i;<br>    }</p>
+<pre><code>int sum_2 = 0;
+int j = 1;
+for (; j &lt; n; ++j) {
+    sum\_2 = sum\_2 + j;
+}
+
+return sum\_1 + sum\_2;</code></pre><p>}</p>
+<p>这里的m、n是两个不同的数据规模，而且我们并不知道谁的规模大。这时候就不能用加法原理来省去其中一个了。事实上，这段代码的时间复杂度为O(m+n)。同样，若是循环嵌套等，时间复杂度为O(m*n)。   看过这么多时间复杂度的例子，接下来简单提一下空间复杂度。仍然是用一个例子：</p>
+<p>void print(int n) {<br>    int i = 0;<br>    int[] a = new int[n];<br>    for (i; i &lt;n; ++i) {<br>        a[i] = i * i;<br>    }</p>
+<pre><code>for (i = n-1; i &gt;= 0; --i) {
+    print out a\[i\]
+}</code></pre><p>}</p>
+<p>第2行中，申请了一个空间存储变量i，而第三行中，申请了n个空间来存一个数组。所以这段代码的空间复杂度为O(n)。常见的空间复杂度就是O(1)、O(n)、O(n²)。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/20/complexity-2/" data-id="ck156146y0006q0niaidvqb28" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/21/complexity-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+           [Geek笔记]复杂度分析（三）：四个神奇的复杂度		
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/19/complexity-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"> [Geek笔记]复杂度分析（一）：入了个门		</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Geek笔记/">Geek笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/云麓谷/">云麓谷</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教材示例/">教材示例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/欢迎！/">欢迎！</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/linear-sequence/"> [数据结构-教材示例]线性表（一）：顺序表		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/21/complexity-3/"> [Geek笔记]复杂度分析（三）：四个神奇的复杂度		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/20/complexity-2/"> [Geek笔记]复杂度分析（二）：一些栗子		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/19/complexity-1/"> [Geek笔记]复杂度分析（一）：入了个门		</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

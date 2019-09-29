@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title> [数据结构-教材示例]线性表（一）：顺序表		 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一 预定义本书当中的预定义： #define TRUE 1 #define FALSE 0 #define OK 1 #define ERROR 0 #define INFEASIBLE -1 #define OVERFLOW -2 typedef int Status; 顺序表中的预定义： #define LIST_INIT_SIZE 100 #define LISTINCREMENT 10 t">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" [数据结构-教材示例]线性表（一）：顺序表		">
+<meta property="og:url" content="http://yoursite.com/2018/10/24/linear-sequence/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一 预定义本书当中的预定义： #define TRUE 1 #define FALSE 0 #define OK 1 #define ERROR 0 #define INFEASIBLE -1 #define OVERFLOW -2 typedef int Status; 顺序表中的预定义： #define LIST_INIT_SIZE 100 #define LISTINCREMENT 10 t">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-29T15:55:07.176Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" [数据结构-教材示例]线性表（一）：顺序表		">
+<meta name="twitter:description" content="一 预定义本书当中的预定义： #define TRUE 1 #define FALSE 0 #define OK 1 #define ERROR 0 #define INFEASIBLE -1 #define OVERFLOW -2 typedef int Status; 顺序表中的预定义： #define LIST_INIT_SIZE 100 #define LISTINCREMENT 10 t">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linear-sequence" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/24/linear-sequence/" class="article-date">
+  <time datetime="2018-10-23T16:15:23.000Z" itemprop="datePublished">2018-10-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教材示例/">教材示例</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+       [数据结构-教材示例]线性表（一）：顺序表		
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一-预定义"><a href="#一-预定义" class="headerlink" title="一 预定义"></a>一 预定义</h2><p>本书当中的预定义：</p>
+<p>#define TRUE 1</p>
+<p>#define FALSE 0</p>
+<p>#define OK 1</p>
+<p>#define ERROR 0</p>
+<p>#define INFEASIBLE -1</p>
+<p>#define OVERFLOW -2</p>
+<p>typedef int Status;</p>
+<p>顺序表中的预定义：</p>
+<p>#define LIST_INIT_SIZE 100</p>
+<p>#define LISTINCREMENT 10</p>
+<p>typedef struct {<br>    char *elem;<br>    int length;<br>    int listsize;<br>}SqList;</p>
+<p>Status equalChar(char a, char b)<br>{<br>    return a == b;<br>}</p>
+<p>ADT抽象数据结构：</p>
+<p>/*<br> * ADT List{<br> * 数据对象:D = { ai | ai ∈ ElemSet, i = 1, 2, …, n, n ≥ 0 }<br> * 数据关系:R1 = { &lt;ai-1,ai&gt; |ai-1,ai ∈ D, i=2, …, n }<br> * 基本操作:<br> *   InitList( &amp;L )</p>
+<ul>
+<li>操作结果：构造一个空的线性表 L。<br>*   DestroyList( &amp;L )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：销毁线性表 L。<br>*   ClearList( &amp;L )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：将 L 重置为空表。<br>*   ListEmpty( L )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：若 L 为空表，则返回 TRUE，否则返回 FALSE。<br>*   ListLength( L )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：返回 L 中数据元素个数。<br>*   GetElem( L, i, &amp;e )</li>
+<li>初始条件：线性表 L 已存在，1≤i≤ListLength(L)。</li>
+<li>操作结果：用 e 返回 L 中第 i 个元素的值。<br>*   LocateElem( L, e, compare() )</li>
+<li>初始条件：线性表 L 已存在，compare()是数据元素判定函数。</li>
+<li>操作结果：返回 L 中第1个与 e 满足关系compare()的数据元素的位序。若这样的数据元素不存在，则返回0。<br>*   PriorElem( L, cur_e, &amp;pre_e )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：若 cur_e 是 L 中的数据元素且不是第一个，则用 pre_e 返回它的前驱。否则操作失败，pre_e 无定义。<br>*   NextElem( L, cur_e, &amp;next_e )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：若 cur_e 是 L 中的数据元素且不是最后一个，则用 next_e 返回它的前驱。否则操作失败，next_e 无定义。<br>*   ListInsert( &amp;L, i, e )</li>
+<li>初始条件：线性表 L 已存在，1≤i≤ListLength(L)+1。</li>
+<li>操作结果：在 L 中的第 i 个位置之前插入新的数据元素 e，L 的长度加1。<br>*   ListDelete( &amp;L, i ,&amp;e )</li>
+<li>初始条件：线性表 L 已存在且非空，1≤i≤ListLength(L)。</li>
+<li>操作结果：删除 L 的第 i 个数据元素，并用 e 返回其值，L 的长度减1。<br>*   ListTraverse( L, visit() )</li>
+<li>初始条件：线性表 L 已存在。</li>
+<li>操作结果：依次对 L 的每个数据元素调用函数 visit()。一旦 visit() 失败，则操作失败。<br>* } ADT List</li>
+<li>/</li>
+</ul>
+<h2 id="二-操作"><a href="#二-操作" class="headerlink" title="二 操作"></a>二 操作</h2><p>Status InitList_Sq(SqList &amp;L) {<br>    L.elem = (char*)malloc(LIST_INIT_SIZE * sizeof(char));<br>    if (!L.elem)<br>        exit(OVERFLOW);<br>    L.length = 0;<br>    L.listsize = LIST_INIT_SIZE;<br>    return OK;<br>}<br>//构建一个空的线性表L。</p>
+<p>L.length表示顺序表的长度，L.listsize表示分配到的空间。</p>
+<p>Status ListInsert_Sq(SqList&amp;L, int i, char e)<br>{<br>    if (i&lt;1 || i&gt;L.length + 1) return FALSE;<br>    if (L.length &gt;= L.listsize)//存储空间不够，重新分配。<br>    {<br>        char* new_base = (char<em>)realloc(L.elem, (LIST_INIT_SIZE + LISTINCREMENT) * sizeof(char));<br>        if (!new_base)<br>            exit(OVERFLOW);<br>        L.elem += LISTINCREMENT;<br>    }<br>    char\</em>p, *q;<br>    q = &amp;(L.elem[i - 1]);<br>    for (p = &amp;(L.elem[L.length - 1]); p &gt;= q; p–) *(p + 1) = *p;<br>    //从最后一个元素开始，依次向后移位。</p>
+<pre><code>*q = e;
+L.length++;
+return OK;</code></pre><p>}<br>//在L中的第i个位置之前插入新的数据元素e，L的长度加1。</p>
+<p>先判断插入位置是否合法，再判断顺序表是否已满，若满则增加分配空间。之后现将插入位置及其后元素向后移一位，再插入元素。</p>
+<p>Status ListDelete_Sq(SqList &amp;L, int i, char &amp;e)<br>{<br>    if (i&lt;1 || i&gt;L.length) return FALSE;<br>    char*p, *q;<br>    p = &amp;(L.elem[i - 1]);<br>    e = *p;<br>    q = L.elem + L.length - 1;//寻找表尾元素<br>    for (++p; p &lt;= q; ++p) *(p - 1) = *p;<br>    –L.length;<br>    return OK;<br>}<br>//删除L的第i个数据元素，并用e返回其值，L的长度减1。</p>
+<p>因为要对e进行操作，所以形参处要写&amp;。(宛如废话=-=)</p>
+<p>int LocateElem_Sq(SqList &amp;L, char e, Status(<em>compare)(char, char))<br>{<br>    int i = 1;<br>    char <em>p = L.elem;<br>    while (i &lt;= L.length &amp;&amp; !(\</em>compare)(\</em>(p++), e)) ++i;<br>    if (i &lt;= L.length) return i;<br>    else return 0;<br>}<br>//返回L中第1个与e满足关系compare()的数据元素的位序。若这样的数据元素不存在，则返回0。</p>
+<p>这里可以自己规定compare()函数。我用的是预定义中的equalChar()，即判断两字符是否相等。</p>
+<p>void MergeList_Sq( SqList La,SqList Lb,SqList &amp;Lc )<br>{<br>    char *pa, *pb, *pc, *pa_last, <em>pb_last;<br>    pa = La.elem; pb = Lb.elem;<br>    Lc.listsize = Lc.length = La.length + Lb.length;<br>    pc = Lc.elem = (char *)malloc(Lc.listsize * sizeof(char));<br>    if (!Lc.elem) exit(OVERFLOW);<br>    pa_last = La.elem + La.length - 1;<br>    pb_last = Lb.elem + Lb.length - 1;<br>    while (pa &lt;= pa_last &amp;&amp; pb &lt;= pb_last)<br>    {<br>        if (\</em>pa &lt;= *pb) *pc++ = *pa++;<br>        else *pc++ = *pb++;<br>    }<br>    while (pa &lt;= pa_last)*pc++ = *pa++;<br>    while (pb &lt;= pb_last)*pc++ = *pb++;<br>}<br>//按照非递减顺序将两个非递减顺序排列的顺序表归并。</p>
+<p>简单来说就是将两个表中的元素逐一比较，较小的放入新表，指针后移，再比较，直到一个顺序表元素全部比较完毕。之后将另一顺序表中的剩余元素直接存入新表。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/24/linear-sequence/" data-id="ck1561478000fq0nigr7qcl84" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/29/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/21/complexity-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"> [Geek笔记]复杂度分析（三）：四个神奇的复杂度		</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Geek笔记/">Geek笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/云麓谷/">云麓谷</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教材示例/">教材示例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/欢迎！/">欢迎！</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/linear-sequence/"> [数据结构-教材示例]线性表（一）：顺序表		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/21/complexity-3/"> [Geek笔记]复杂度分析（三）：四个神奇的复杂度		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/20/complexity-2/"> [Geek笔记]复杂度分析（二）：一些栗子		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/19/complexity-1/"> [Geek笔记]复杂度分析（一）：入了个门		</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

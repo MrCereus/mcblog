@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title> [Geek笔记]复杂度分析（三）：四个神奇的复杂度		 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" [Geek笔记]复杂度分析（三）：四个神奇的复杂度		">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/complexity-3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-29T15:55:07.176Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" [Geek笔记]复杂度分析（三）：四个神奇的复杂度		">
+<meta name="twitter:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-complexity-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/21/complexity-3/" class="article-date">
+  <time datetime="2018-10-21T08:26:37.000Z" itemprop="datePublished">2018-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Geek笔记/">Geek笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+       [Geek笔记]复杂度分析（三）：四个神奇的复杂度		
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。</p>
+<h3 id="最好、最坏情况时间复杂度"><a href="#最好、最坏情况时间复杂度" class="headerlink" title="最好、最坏情况时间复杂度"></a>最好、最坏情况时间复杂度</h3><p>首先还是来看一段代码：</p>
+<p>// n 表示数组 array 的长度<br>int find(int[] array, int n, int x) {<br>    int i = 0;<br>    int pos = -1;<br>    for (; i &lt; n; ++i) {<br>        if (array[i] == x) pos = i;<br>    }<br>    return pos;<br>}</p>
+<p>这段代码实现的功能是，在一个数组中寻找一个变量x，并返回它的位置。很明显，这里的复杂度为O(n)。但事实上，我们并不一定需要遍历完整个数组。如果我们在前面的位置发现了这个元素，就可以直接返回了：</p>
+<p>// n 表示数组 array 的长度<br>int find(int[] array, int n, int x) {<br>    int i = 0;<br>    int pos = -1;<br>    for (; i &lt; n; ++i) {<br>        if (array[i] == x) {<br>            pos = i;<br>            break;<br>        }<br>    }<br>    return pos;<br>}</p>
+<p>就像这样。如果要找的元素在第一位，则只需要循环一次就可以找到它并结束循环。而若数组中没有这个元素，就仍需要循环n次。这两种情况下的时间复杂度分别为O(1)和O(n)。 这两种情况就分别对应着最好情况时间复杂度和最坏情况时间复杂度。最好时间复杂度就是在最理想的情况下，执行这段代码的时间复杂度。同理，最坏时间复杂度就是在最糟糕的情况下，执行这段代码的时间复杂度。</p>
+<h3 id="平均情况时间复杂度"><a href="#平均情况时间复杂度" class="headerlink" title="平均情况时间复杂度"></a>平均情况时间复杂度</h3><p>事实上，最好和最坏的情况都不是那么经常发生的。那我们有什么更好的方式来表示时间复杂度吗？ 在上面的第二个例子中，我们假设元素在与不在数组的概率都为1/2。那么，在数组中任一位置的概率就为1/2n。因此，需要循环的次数的平均值就为： 1*1/2n+…..+n*1/2n+n*1/2=(3n+1)/4 这个其实就是一个加权平均数，算出来的时间复杂度就是平均情况时间复杂度。我们可以看到，这里算出来的时间复杂度仍然为O(n)。</p>
+<h3 id="均摊时间复杂度"><a href="#均摊时间复杂度" class="headerlink" title="均摊时间复杂度"></a>均摊时间复杂度</h3><p>还是先看一段代码：</p>
+<p> // array 表示一个长度为 n 的数组<br> // 代码中的 array.length 就等于 n<br>int[] array = new int[n];<br>int count = 0;</p>
+<p>void insert(int val) {<br>    if (count == array.length) {<br>        int sum = 0;<br>        for (int i = 0; i &lt; array.length; ++i) {<br>            sum = sum + array[i];<br>        }<br>        array[0] = sum;<br>        count = 1;<br>    }</p>
+<pre><code>array\[count\] = val;
+++count;</code></pre><p>}</p>
+<p>这段代码的意思是，如果数组没有满，就直接将数据插入数组；如果满了，就先将数组遍历求和，将和存入数组第一个元素，再插入后面的元素。很明显，最好和最坏时间复杂度分别为O(1)和O(n)，而平均复杂度为O(1)。像这种大部分情况复杂度很低，极端情况下复杂度很高的代码，我们可以将复杂度高的部分分摊到低的部分。因此，一般均摊时间复杂度等于最好情况时间复杂度。 （反正也不会用，溜了溜了）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/21/complexity-3/" data-id="ck15614730009q0nilvug91ry" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/24/linear-sequence/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+           [数据结构-教材示例]线性表（一）：顺序表		
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/10/20/complexity-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"> [Geek笔记]复杂度分析（二）：一些栗子		</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Geek笔记/">Geek笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/云麓谷/">云麓谷</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教材示例/">教材示例</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/欢迎！/">欢迎！</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/09/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/linear-sequence/"> [数据结构-教材示例]线性表（一）：顺序表		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/21/complexity-3/"> [Geek笔记]复杂度分析（三）：四个神奇的复杂度		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/20/complexity-2/"> [Geek笔记]复杂度分析（二）：一些栗子		</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/19/complexity-1/"> [Geek笔记]复杂度分析（一）：入了个门		</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
