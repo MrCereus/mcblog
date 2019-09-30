@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="一颗仙人掌">
 <meta property="og:description" content="一 预定义本书当中的预定义： #define TRUE 1 #define FALSE 0 #define OK 1 #define ERROR 0 #define INFEASIBLE -1 #define OVERFLOW -2 typedef int Status; 顺序表中的预定义： #define LIST_INIT_SIZE 100 #define LISTINCREMENT 10 t">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-29T15:55:07.176Z">
+<meta property="og:updated_time" content="2019-09-30T03:38:24.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" [数据结构-教材示例]线性表（一）：顺序表		">
 <meta name="twitter:description" content="一 预定义本书当中的预定义： #define TRUE 1 #define FALSE 0 #define OK 1 #define ERROR 0 #define INFEASIBLE -1 #define OVERFLOW -2 typedef int Status; 顺序表中的预定义： #define LIST_INIT_SIZE 100 #define LISTINCREMENT 10 t">
@@ -242,6 +242,8 @@
 <p>#define LISTINCREMENT 10</p>
 <p>typedef struct {<br>    char *elem;<br>    int length;<br>    int listsize;<br>}SqList;</p>
 <p>Status equalChar(char a, char b)<br>{<br>    return a == b;<br>}</p>
+<a id="more"></a>
+
 <p>ADT抽象数据结构：</p>
 <p>/*<br> * ADT List{<br> * 数据对象:D = { ai | ai ∈ ElemSet, i = 1, 2, …, n, n ≥ 0 }<br> * 数据关系:R1 = { &lt;ai-1,ai&gt; |ai-1,ai ∈ D, i=2, …, n }<br> * 基本操作:<br> *   InitList( &amp;L )</p>
 <ul>
@@ -386,15 +388,6 @@ return OK;</code></pre><p>}<br>//在L中的第i个位置之前插入新的数据
 
 
 <nav id="article-nav">
-  
-    <a href="/2019/09/29/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
   
     <a href="/2018/10/21/complexity-3/" id="article-nav-older" class="article-nav-link-wrap">

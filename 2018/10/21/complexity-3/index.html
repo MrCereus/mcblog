@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+  <meta name="description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： 123456789// n 表示数组 array 的长度int find(int\[\] array, int n, int x) &amp;#123;    int i = 0;    int pos = -1;    for (; i &amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" [Geek笔记]复杂度分析（三）：四个神奇的复杂度		">
 <meta property="og:url" content="https://blog.mrcactus.cn/2018/10/21/complexity-3/index.html">
 <meta property="og:site_name" content="一颗仙人掌">
-<meta property="og:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+<meta property="og:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： 123456789// n 表示数组 array 的长度int find(int\[\] array, int n, int x) &amp;#123;    int i = 0;    int pos = -1;    for (; i &amp;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-29T15:55:07.176Z">
+<meta property="og:updated_time" content="2019-09-30T03:37:50.998Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" [Geek笔记]复杂度分析（三）：四个神奇的复杂度		">
-<meta name="twitter:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： // n 表示数组 array 的长度int find(int[] array, int n, int x) {    int i = 0;    int pos = -1;    for (; i &amp;lt; n; ++i) {">
+<meta name="twitter:description" content="这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。 最好、最坏情况时间复杂度首先还是来看一段代码： 123456789// n 表示数组 array 的长度int find(int\[\] array, int n, int x) &amp;#123;    int i = 0;    int pos = -1;    for (; i &amp;">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -209,7 +209,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">815字</span>
+      <span class="post-count">834字</span>
     </span>
   </span>
 
@@ -231,16 +231,18 @@
     
     <p>这篇文章来谈一谈四个复杂度分析方面的点：最好情况时间复杂度、最坏情况时间复杂度、平均情况时间复杂度、均摊时间复杂度。</p>
 <h3 id="最好、最坏情况时间复杂度"><a href="#最好、最坏情况时间复杂度" class="headerlink" title="最好、最坏情况时间复杂度"></a>最好、最坏情况时间复杂度</h3><p>首先还是来看一段代码：</p>
-<p>// n 表示数组 array 的长度<br>int find(int[] array, int n, int x) {<br>    int i = 0;<br>    int pos = -1;<br>    for (; i &lt; n; ++i) {<br>        if (array[i] == x) pos = i;<br>    }<br>    return pos;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// n 表示数组 array 的长度</span><br><span class="line">int find(int\[\] array, int n, int x) &#123;</span><br><span class="line">    int i = 0;</span><br><span class="line">    int pos = -1;</span><br><span class="line">    for (; i &lt; n; ++i) &#123;</span><br><span class="line">        if (array\[i\] == x) pos = i;</span><br><span class="line">    &#125;</span><br><span class="line">    return pos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
 <p>这段代码实现的功能是，在一个数组中寻找一个变量x，并返回它的位置。很明显，这里的复杂度为O(n)。但事实上，我们并不一定需要遍历完整个数组。如果我们在前面的位置发现了这个元素，就可以直接返回了：</p>
-<p>// n 表示数组 array 的长度<br>int find(int[] array, int n, int x) {<br>    int i = 0;<br>    int pos = -1;<br>    for (; i &lt; n; ++i) {<br>        if (array[i] == x) {<br>            pos = i;<br>            break;<br>        }<br>    }<br>    return pos;<br>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// n 表示数组 array 的长度</span><br><span class="line">int find(int\[\] array, int n, int x) &#123;</span><br><span class="line">    int i = 0;</span><br><span class="line">    int pos = -1;</span><br><span class="line">    for (; i &lt; n; ++i) &#123;</span><br><span class="line">        if (array\[i\] == x) &#123;</span><br><span class="line">            pos = i;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return pos;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>就像这样。如果要找的元素在第一位，则只需要循环一次就可以找到它并结束循环。而若数组中没有这个元素，就仍需要循环n次。这两种情况下的时间复杂度分别为O(1)和O(n)。 这两种情况就分别对应着最好情况时间复杂度和最坏情况时间复杂度。最好时间复杂度就是在最理想的情况下，执行这段代码的时间复杂度。同理，最坏时间复杂度就是在最糟糕的情况下，执行这段代码的时间复杂度。</p>
 <h3 id="平均情况时间复杂度"><a href="#平均情况时间复杂度" class="headerlink" title="平均情况时间复杂度"></a>平均情况时间复杂度</h3><p>事实上，最好和最坏的情况都不是那么经常发生的。那我们有什么更好的方式来表示时间复杂度吗？ 在上面的第二个例子中，我们假设元素在与不在数组的概率都为1/2。那么，在数组中任一位置的概率就为1/2n。因此，需要循环的次数的平均值就为： 1*1/2n+…..+n*1/2n+n*1/2=(3n+1)/4 这个其实就是一个加权平均数，算出来的时间复杂度就是平均情况时间复杂度。我们可以看到，这里算出来的时间复杂度仍然为O(n)。</p>
 <h3 id="均摊时间复杂度"><a href="#均摊时间复杂度" class="headerlink" title="均摊时间复杂度"></a>均摊时间复杂度</h3><p>还是先看一段代码：</p>
-<p> // array 表示一个长度为 n 的数组<br> // 代码中的 array.length 就等于 n<br>int[] array = new int[n];<br>int count = 0;</p>
-<p>void insert(int val) {<br>    if (count == array.length) {<br>        int sum = 0;<br>        for (int i = 0; i &lt; array.length; ++i) {<br>            sum = sum + array[i];<br>        }<br>        array[0] = sum;<br>        count = 1;<br>    }</p>
-<pre><code>array\[count\] = val;
-++count;</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> // array 表示一个长度为 n 的数组</span><br><span class="line"> // 代码中的 array.length 就等于 n</span><br><span class="line">int\[\] array = new int\[n\];</span><br><span class="line">int count = 0;</span><br><span class="line"> </span><br><span class="line">void insert(int val) &#123;</span><br><span class="line">    if (count == array.length) &#123;</span><br><span class="line">        int sum = 0;</span><br><span class="line">        for (int i = 0; i &lt; array.length; ++i) &#123;</span><br><span class="line">            sum = sum + array\[i\];</span><br><span class="line">        &#125;</span><br><span class="line">        array\[0\] = sum;</span><br><span class="line">        count = 1;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    array\[count\] = val;</span><br><span class="line">    ++count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这段代码的意思是，如果数组没有满，就直接将数据插入数组；如果满了，就先将数组遍历求和，将和存入数组第一个元素，再插入后面的元素。很明显，最好和最坏时间复杂度分别为O(1)和O(n)，而平均复杂度为O(1)。像这种大部分情况复杂度很低，极端情况下复杂度很高的代码，我们可以将复杂度高的部分分摊到低的部分。因此，一般均摊时间复杂度等于最好情况时间复杂度。 （反正也不会用，溜了溜了）</p>
 
     
