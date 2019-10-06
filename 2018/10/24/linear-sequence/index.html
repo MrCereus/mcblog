@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST\_INIT\_SIZE 100#def">
+  <meta name="description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST_INIT_SIZE 100#defin">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" [数据结构-教材示例]线性表（一）：顺序表		">
 <meta property="og:url" content="https://blog.mrcactus.cn/2018/10/24/linear-sequence/index.html">
 <meta property="og:site_name" content="一颗仙人掌">
-<meta property="og:description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST\_INIT\_SIZE 100#def">
+<meta property="og:description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST_INIT_SIZE 100#defin">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-06T16:20:20.667Z">
+<meta property="og:updated_time" content="2019-10-06T16:45:14.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" [数据结构-教材示例]线性表（一）：顺序表		">
-<meta name="twitter:description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST\_INIT\_SIZE 100#def">
+<meta name="twitter:description" content="一 预定义本书当中的预定义： 123456789#define TRUE 1#define FALSE 0#define OK 1#define ERROR 0#define INFEASIBLE -1#define OVERFLOW -2typedef int Status;  顺序表中的预定义： 12345678910111213#define LIST_INIT_SIZE 100#defin">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -111,11 +111,6 @@
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      
-      
-      <a class="forkMe" style="position:absolute;z-index:999;top:0;right:0.5em" href="https://github.com/JoeyBling/hexo-theme-yilia-plus"
-        target="_blank"><img width="149" height="149" src="/img/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
       
       
 <nav id="mobile-nav">
@@ -233,7 +228,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br></pre></td></tr></table></figure>
 
 <p>顺序表中的预定义：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST\_INIT\_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LISTINCREMENT 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">equalChar</span><span class="params">(<span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a == b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LISTINCREMENT 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">equalChar</span><span class="params">(<span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a == b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <a id="more"></a>
 
