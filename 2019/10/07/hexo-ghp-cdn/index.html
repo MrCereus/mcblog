@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/domainSet.png">
 <meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/cdnCNAME.png">
 <meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/SSL.png">
-<meta property="og:updated_time" content="2019-10-10T16:16:06.353Z">
+<meta property="og:updated_time" content="2019-10-11T06:57:55.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在GitHub Pages上搭建Hexo博客">
 <meta name="twitter:description" content="Github Pages多好，CDN又不贵，还要啥服务器（滑稽    搭建环境1. 安装Node.jsWindows下访问 Node.js官网 ，下载安装包，装就完事儿了。   2.安装Git毕竟是要搭在GitHub上面的，没有Git怎么行。Windows下访问 Git官网 ，跟Node.js一样装就完了。Linux下的我还没装，也不知道咋整=。。=回头再说。    安装Hexo搭建完环境后，可以">
@@ -210,7 +210,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">878字</span>
+      <span class="post-count">890字</span>
     </span>
   </span>
 
@@ -258,6 +258,7 @@
 <h4 id="4-设置博客"><a href="#4-设置博客" class="headerlink" title="4.设置博客"></a>4.设置博客</h4><p>进入blog目录下，打开_config.yml，配置deploy部分：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https://github.com/your_username/your_username.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
 
+<p>在目录下运行<br><code>npm install --save hexo-deployer-git</code></p>
 <hr>
 <h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><h4 id="1-清除缓存和已生成文件"><a href="#1-清除缓存和已生成文件" class="headerlink" title="1.清除缓存和已生成文件"></a>1.清除缓存和已生成文件</h4><p><code>hexo clean</code></p>
 <h4 id="2-生成静态文件"><a href="#2-生成静态文件" class="headerlink" title="2.生成静态文件"></a>2.生成静态文件</h4><p><code>hexo generate/hexo g</code></p>
