@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC 框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models 模型层用来处理数据库，Views 视图层是前端页面，Controll">
+  <meta name="description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models模型层用来处理数据库，Views 视图层是前端页面，Controller">
 <meta property="og:type" content="article">
 <meta property="og:title" content=" Django学习笔记（一）		">
 <meta property="og:url" content="https://blog.mrcactus.cn/2018/10/10/django-learn-1/index.html">
 <meta property="og:site_name" content="一颗仙人掌">
-<meta property="og:description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC 框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models 模型层用来处理数据库，Views 视图层是前端页面，Controll">
+<meta property="og:description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models模型层用来处理数据库，Views 视图层是前端页面，Controller">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-06T16:22:40.704Z">
+<meta property="og:updated_time" content="2019-10-11T14:57:33.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" Django学习笔记（一）		">
-<meta name="twitter:description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC 框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models 模型层用来处理数据库，Views 视图层是前端页面，Controll">
+<meta name="twitter:description" content="受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models模型层用来处理数据库，Views 视图层是前端页面，Controller">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -78,6 +78,8 @@
 				<li><a href="/" target="_blank">主页</a></li>
 	        
 				<li><a href="https://www.cnblogs.com/shengxiaoxuan/" target="_blank">技术笔记</a></li>
+	        
+				<li><a href="/categories" target="_blank">目录</a></li>
 	        
 			</ul>
 		</nav>
@@ -137,6 +139,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -150,12 +154,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="https://www.cnblogs.com/shengxiaoxuan/">技术笔记</a></li>
+					<li style="width: 33.333333333333336%"><a href="https://www.cnblogs.com/shengxiaoxuan/">技术笔记</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/categories">目录</a></li>
 		        
 				</ul>
 			</nav>
@@ -204,7 +210,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">548字</span>
+      <span class="post-count">546字</span>
     </span>
   </span>
 
@@ -213,7 +219,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -224,7 +230,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 <br><br>讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC 框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models 模型层用来处理数据库，Views 视图层是前端页面，Controllers 控制器是后台代码。但在 Django 中，Views 是后台代码，取而代之的，Templates 模板层则是前端视图，只有 Models 功能是一样的。同样，CI 框架中 URL 只需要按照规则即可访问，Django 中貌似每次都需要自行配置。确实增加了灵活性，但同时也复杂了许多。下面就开始吧。<br><br>我使用的开发环境为 ubuntu18.04+python3.6.5+pycharm 。实际上安装非常简单，使用 pip 执行命令 pip install Django 即可。但那天实验室网不太好，几次都连接失败了，只能通过whl来安装了，不过无伤大雅。随后通过 python 命令行可以查看否安装成功。安装成功之后，下一步就是新建项目了。输入命令 django-admin startproject projectname 即可新建项目。进入项目文件夹，输入命令 python manage.py startapp appname 即可新建 app 。在 app 目录中新建 static 文件夹用于存放 js,css 等文件，新建 templates 文件夹用于存放前端页面。最后在 setting.py 的 INSTALLED_APPS 中，添加 app即可完成注册。 浏览项目的目录结构，manage.py 是一个命令行工具，可以实现很多功能。urls.py 是当前 Django 项目的 URL 声明。settings.py 是当前 Django 项目的设置/配置文件。wsgi.py 是一个 WSGI 兼容的 Web 服务器的入口，用来运行 Django 项目。 到这一步，一个项目就差不多新建好了。不过这还早着呢…..感觉这东西不会这么轻易放过我…..怕了怕了……</p>
+    <p>受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 <br><br>讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC<br>框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models<br>模型层用来处理数据库，Views 视图层是前端页面，Controllers 控制器是后台代码。但在 Django 中，Views<br>是后台代码，取而代之的，Templates 模板层则是前端视图，只有 Models 功能是一样的。同样，CI 框架中 URL<br>只需要按照规则即可访问，Django 中貌似每次都需要自行配置。确实增加了灵活性，但同时也复杂了许多。下面就开始吧。<br> 我使用的开发环境为<br>ubuntu18.04+python3.6.5+pycharm 。实际上安装非常简单，使用 pip 执行命令 pip install<br>Django 即可。但那天实验室网不太好，几次都连接失败了，只能通过whl来安装了，不过无伤大雅。随后通过 python<br>命令行可以查看否安装成功。安装成功之后，下一步就是新建项目了。输入命令 django-admin startproject<br>projectname 即可新建项目。进入项目文件夹，输入命令 python manage.py startapp appname 即可新建<br>app 。在 app 目录中新建 static 文件夹用于存放 js,css 等文件，新建 templates 文件夹用于存放前端页面。最后在<br>setting.py 的 INSTALLED_APPS 中，添加 app即可完成注册。 浏览项目的目录结构，manage.py<br>是一个命令行工具，可以实现很多功能。urls.py 是当前 Django 项目的 URL 声明。settings.py 是当前 Django<br>项目的设置/配置文件。wsgi.py 是一个 WSGI 兼容的 Web 服务器的入口，用来运行 Django 项目。<br>到这一步，一个项目就差不多新建好了。不过这还早着呢…..感觉这东西不会这么轻易放过我…..怕了怕了……</p>
 
     
 
@@ -291,7 +297,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Django//" class="article-tag-list-link color2">Django</a>
+        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Python/Django//" class="article-tag-list-link color2">Django</a>
         		</li>
       		
 		</ul>
