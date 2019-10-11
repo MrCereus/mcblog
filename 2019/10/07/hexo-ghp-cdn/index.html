@@ -17,16 +17,16 @@
 <meta property="og:site_name" content="一颗仙人掌">
 <meta property="og:description" content="Github Pages多好，CDN又不贵，还要啥服务器（滑稽    搭建环境1. 安装Node.jsWindows下访问 Node.js官网 ，下载安装包，装就完事儿了。   2.安装Git毕竟是要搭在GitHub上面的，没有Git怎么行。Windows下访问 Git官网 ，跟Node.js一样装就完了。Linux下的我还没装，也不知道咋整=。。=回头再说。    安装Hexo搭建完环境后，可以">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/reponame.png">
-<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/GitHubPagesCNAME.png">
-<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/domainSet.png">
-<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/cdnCNAME.png">
-<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/SSL.png">
-<meta property="og:updated_time" content="2019-10-11T06:57:55.607Z">
+<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/reponame.png">
+<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/GitHubPagesCNAME.png">
+<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/domainSet.png">
+<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/cdnCNAME.png">
+<meta property="og:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/SSL.png">
+<meta property="og:updated_time" content="2019-10-11T10:53:09.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在GitHub Pages上搭建Hexo博客">
 <meta name="twitter:description" content="Github Pages多好，CDN又不贵，还要啥服务器（滑稽    搭建环境1. 安装Node.jsWindows下访问 Node.js官网 ，下载安装包，装就完事儿了。   2.安装Git毕竟是要搭在GitHub上面的，没有Git怎么行。Windows下访问 Git官网 ，跟Node.js一样装就完了。Linux下的我还没装，也不知道咋整=。。=回头再说。    安装Hexo搭建完环境后，可以">
-<meta name="twitter:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/reponame.png">
+<meta name="twitter:image" content="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/reponame.png">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -253,7 +253,7 @@
 </blockquote>
 <hr>
 <h2 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h2><h4 id="1-注册GitHub账号"><a href="#1-注册GitHub账号" class="headerlink" title="1.注册GitHub账号"></a>1.注册GitHub账号</h4><p>在 <a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">GitHub注册界面</a> 就可以搞定了  </p>
-<h4 id="2-新建仓库"><a href="#2-新建仓库" class="headerlink" title="2.新建仓库"></a>2.新建仓库</h4><p>仓库名如下，xxxx.github.io，我也不知道是不是一定要username,反正我弄了三个不一样的= =<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/reponame.png" alt><br>随后勾选GitHub Pages,并填上自己的域名。如果不用CDN加速，可以打开Enforce HTTPS.<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/GitHubPagesCNAME.png" alt><br>设置完之后，文件中会出现一个CNAME，里面是写上的Custom domain.  </p>
+<h4 id="2-新建仓库"><a href="#2-新建仓库" class="headerlink" title="2.新建仓库"></a>2.新建仓库</h4><p>仓库名如下，xxxx.github.io，我也不知道是不是一定要username,反正我弄了三个不一样的= =<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/reponame.png" alt><br>随后勾选GitHub Pages,并填上自己的域名。如果不用CDN加速，可以打开Enforce HTTPS.<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/GitHubPagesCNAME.png" alt><br>设置完之后，文件中会出现一个CNAME，里面是写上的Custom domain.  </p>
 <h4 id="3-设置Git的用户名和密码"><a href="#3-设置Git的用户名和密码" class="headerlink" title="3.设置Git的用户名和密码"></a>3.设置Git的用户名和密码</h4><p>git config –global user.name 这里是申请Github账号时的name<br>git config –global user.email 这里是申请Github账号时的邮箱</p>
 <h4 id="4-设置博客"><a href="#4-设置博客" class="headerlink" title="4.设置博客"></a>4.设置博客</h4><p>进入blog目录下，打开_config.yml，配置deploy部分：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: https://github.com/your_username/your_username.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
@@ -271,8 +271,8 @@
 <p>理论上经过上述步骤，可以通过http:// or https:// xxx.domain.com来访问博客了。</p>
 <hr>
 <h2 id="CDN加速"><a href="#CDN加速" class="headerlink" title="CDN加速"></a>CDN加速</h2><p>我选择的是 <a href="https://cloud.tencent.com/product/cdn" target="_blank" rel="noopener">腾讯云CDN</a><br>，新用户有每月50G的流量包，持续六个月。</p>
-<h4 id="添加域名"><a href="#添加域名" class="headerlink" title="添加域名"></a>添加域名</h4><p>域名写刚才配置了CNAME的域名，源站设置写GitHub Pages的域名。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/domainSet.png" alt><br>添加完之后，域名管理处会多一个CNAME记录值，在云解析控制台将该域名的记录值修改为此处的记录值。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/cdnCNAME.png" alt>  </p>
-<h4 id="强制HTTPS"><a href="#强制HTTPS" class="headerlink" title="强制HTTPS"></a>强制HTTPS</h4><p>先去SSL证书管理处申请证书，等待审核通过后，在证书管理处配置证书。配置如图，腾讯云托管证书处选择该域名对应的证书。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/hexo-ghp-cdn/SSL.png" alt><br>之后在域名管理-管理-高级设置中打开强制跳转HTTPS即可。注意，此刻要关掉GitHub Pages配置中的Enforce<br>HTTPS，否则会出现重定向过多导致无法访问的问题出现。</p>
+<h4 id="添加域名"><a href="#添加域名" class="headerlink" title="添加域名"></a>添加域名</h4><p>域名写刚才配置了CNAME的域名，源站设置写GitHub Pages的域名。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/domainSet.png" alt><br>添加完之后，域名管理处会多一个CNAME记录值，在云解析控制台将该域名的记录值修改为此处的记录值。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/cdnCNAME.png" alt>  </p>
+<h4 id="强制HTTPS"><a href="#强制HTTPS" class="headerlink" title="强制HTTPS"></a>强制HTTPS</h4><p>先去SSL证书管理处申请证书，等待审核通过后，在证书管理处配置证书。配置如图，腾讯云托管证书处选择该域名对应的证书。<br><img src="https://mrcactus.oss-cn-shenzhen.aliyuncs.com/blogForGitHubPages/hexo-ghp-cdn/SSL.png" alt><br>之后在域名管理-管理-高级设置中打开强制跳转HTTPS即可。注意，此刻要关掉GitHub Pages配置中的Enforce<br>HTTPS，否则会出现重定向过多导致无法访问的问题出现。</p>
 
     
 
