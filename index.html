@@ -278,6 +278,175 @@
 
 
   
+    <article id="post-v2ray-ws-caddy" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/12/01/v2ray-ws-caddy/" target="_blank">v2ray+caddy+ws配置</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/12/01/v2ray-ws-caddy/" class="archive-article-date">
+        <time datetime="2019-12-01T03:43:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h4 id="Caddy"><a href="#Caddy" class="headerlink" title="Caddy"></a>Caddy</h4><p>安装：<br><code>CADDY_TELEMETRY=on curl https://getcaddy.com | bash -s personal</code></p>
+<p>Caddyflie:新建路径：/etc/caddy，在其中新建Caddyfile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">YOURDOMAIN &#123;         </span><br><span class="line">    root /www          </span><br><span class="line">    tls youemail@xxx.com      </span><br><span class="line">    timeouts none          </span><br><span class="line">    proxy /v2ray 127.0.0.1:10086 &#123;                 </span><br><span class="line">        websocket</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>caddy -agree &amp;</p>
+<h4 id="v2ray"><a href="#v2ray" class="headerlink" title="v2ray"></a>v2ray</h4><p><code>bash &lt;(curl -L -s https://install.direct/go.sh)</code></p>
+<p>默认目录/etc/v2ray/config.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"inbounds"</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"port"</span>:<span class="number">10086</span>,</span><br><span class="line">            <span class="attr">"listen"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"protocol"</span>:<span class="string">"vmess"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>:&#123;</span><br><span class="line">                <span class="attr">"clients"</span>:[</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>:<span class="string">"YOURUUID"</span>,</span><br><span class="line">                        <span class="attr">"alterId"</span>:<span class="number">64</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"streamSettings"</span>:&#123;</span><br><span class="line">                <span class="attr">"network"</span>:<span class="string">"ws"</span>,</span><br><span class="line">                <span class="attr">"wsSettings"</span>:&#123;</span><br><span class="line">                    <span class="attr">"path"</span>:<span class="string">"/v2ray"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">"tlsSettings"</span>:&#123;</span><br><span class="line">                    <span class="attr">"allowInsecure"</span>:<span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"outbounds"</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>:<span class="string">"freedom"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>:&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">        <span class="attr">"transport"</span>:&#123;</span><br><span class="line">        <span class="attr">"sockopt"</span>:&#123;</span><br><span class="line">            <span class="attr">"tcpFastOpen"</span>:<span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>service v2ray start/stop/restart/status</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/12/01/v2ray-ws-caddy/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-miui-camera-pro" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2019/10/16/miui-camera-pro/" target="_blank">MIUI相机中的专业模式有啥用</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2019/10/16/miui-camera-pro/" class="archive-article-date">
+        <time datetime="2019-10-16T07:11:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/摄影//" class="article-tag-list-link color3">摄影</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2019/10/16/miui-camera-pro/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-OO" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -903,182 +1072,10 @@
 
 
   
-    <article id="post-django-learn-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
   
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/10/10/django-learn-1/" target="_blank"> Django学习笔记（一）		</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/10/10/django-learn-1/" class="archive-article-date">
-        <time datetime="2018-10-10T09:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>受不了手册和虚拟机分屏放了。。开始写个学习笔记吧。 <br><br>讲真一开始只是对这个东西感兴趣而已，想着有时间的话学一下，没想到这么快就“被逼无奈”要开始学了。查了一下，发现这玩意儿也是所谓的 MVC<br>框架，感觉上好像和 PHP 的 CI 框架差不多，那就试试吧。结果，仔细一看，这两种框架差别还是非常大的。CI 里的 MVC ，Models<br>模型层用来处理数据库，Views 视图层是前端页面，Controllers 控制器是后台代码。但在 Django 中，Views<br>是后台代码，取而代之的，Templates 模板层则是前端视图，只有 Models 功能是一样的。同样，CI 框架中 URL<br>只需要按照规则即可访问，Django 中貌似每次都需要自行配置。确实增加了灵活性，但同时也复杂了许多。下面就开始吧。<br> 我使用的开发环境为<br>ubuntu18.04+python3.6.5+pycharm 。实际上安装非常简单，使用 pip 执行命令 pip install<br>Django 即可。但那天实验室网不太好，几次都连接失败了，只能通过whl来安装了，不过无伤大雅。随后通过 python<br>命令行可以查看否安装成功。安装成功之后，下一步就是新建项目了。输入命令 django-admin startproject<br>projectname 即可新建项目。进入项目文件夹，输入命令 python manage.py startapp appname 即可新建<br>app 。在 app 目录中新建 static 文件夹用于存放 js,css 等文件，新建 templates 文件夹用于存放前端页面。最后在<br>setting.py 的 INSTALLED_APPS 中，添加 app即可完成注册。 浏览项目的目录结构，manage.py<br>是一个命令行工具，可以实现很多功能。urls.py 是当前 Django 项目的 URL 声明。settings.py 是当前 Django<br>项目的设置/配置文件。wsgi.py 是一个 WSGI 兼容的 Web 服务器的入口，用来运行 Django 项目。<br>到这一步，一个项目就差不多新建好了。不过这还早着呢…..感觉这东西不会这么轻易放过我…..怕了怕了……</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python//" class="article-tag-list-link color2">Python</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Python/Django//" class="article-tag-list-link color2">Django</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/10/10/django-learn-1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-teach-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/05/26/teach-1/" target="_blank"> 培训心得(一)		</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/05/26/teach-1/" class="archive-article-date">
-        <time datetime="2018-05-26T15:52:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-26</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>虽说题目里有个“一”，但是其实并不知道之后还有没有“二”甚至“三”。毕竟是自己第一次带培训，也不知道以后还会不会留在云麓谷，反正趁着刚结束了这个学期最后一次培训，先总结了再说吧。 其实现在看来，这个学期的培训其实是极其混乱的。一共培训了六次吧，一次线上的，一次围坐在一起敲代码的，算起来总共也就四次有效培训。第一次培训用了半个小时讲基础知识，一个小时讲爬虫。说实话，这样做效果是真的不好，直到现在都没有把学期初的任务完成。后来在他们的坚持下，开始从头开始讲。看起来都听懂了，但是实际用起来的话感觉还是有困难的。毕竟只花了三节课的时间，CI框架讲的极其简单，估计离上手还会有很长一段时间吧。 我在这些培训当中得到了些什么呢？我不确定。我感觉我只是把上个学期就应该掌握了的东西掌握了，自己水平也没有怎么提高过。但是如果不培训的话，可能早就离开了吧？还是得到了一些东西的，至少锻炼了自己与人交流的能力（虽然都是熟人（笑。可能这就是为什么给他们布置了考核内容之后，我也给我自己留了一道题。大概就是想练练手吧。 希望他们和前端的同学们合作愉快。也希望他们赶紧成长起来。这样无论我退或不退，压力应该都不会这么大了吧。加油。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/云麓谷//" class="article-tag-list-link color4">云麓谷</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/05/26/teach-1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
