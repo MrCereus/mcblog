@@ -278,6 +278,100 @@
 
 
   
+    <article id="post-ubuntu-switch-pyversion" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/03/17/ubuntu-switch-pyversion/" target="_blank">Ubuntu更换Python3版本</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/03/17/ubuntu-switch-pyversion/" class="archive-article-date">
+        <time datetime="2020-03-17T08:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>在Ubuntu下更新Python3的大版本</p>
+<h4 id="查看Python版本"><a href="#查看Python版本" class="headerlink" title="查看Python版本"></a>查看Python版本</h4><p><code>python3 --version</code></p>
+<h4 id="安装新版Python"><a href="#安装新版Python" class="headerlink" title="安装新版Python"></a>安装新版Python</h4><p><code>sudo apt install python3.x</code></p>
+<h4 id="删除软连接"><a href="#删除软连接" class="headerlink" title="删除软连接"></a>删除软连接</h4><p><code>sudo rm -rf /usr/bin/python3</code>  </p>
+<p>如果安装过pip3<br><code>sudo rm -rf /usr/bin/pip3</code><br><code>sudo apt remove python3-pip</code></p>
+<h4 id="查看Python3-x路径"><a href="#查看Python3-x路径" class="headerlink" title="查看Python3.x路径"></a>查看Python3.x路径</h4><p><code>which python3.x</code></p>
+<p>一般为<code>/usr/bin/python3.x</code></p>
+<h4 id="添加软连接"><a href="#添加软连接" class="headerlink" title="添加软连接"></a>添加软连接</h4><p><code>sudo ln -s /usr/bin/python3.x /usr/bin/python3</code><br><code>sudo apt install python3-pip</code></p>
+<h4 id="查看pip3版本"><a href="#查看pip3版本" class="headerlink" title="查看pip3版本"></a>查看pip3版本</h4><p><code>pip3 -V</code></p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/服务器//" class="article-tag-list-link color4">服务器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/03/17/ubuntu-switch-pyversion/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-lhy-ml-chap1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -996,95 +1090,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2018/10/20/complexity-2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-complexity-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/10/19/complexity-1/" target="_blank"> [Geek笔记]复杂度分析（一）：入了个门		</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/10/19/complexity-1/" class="archive-article-date">
-        <time datetime="2018-10-19T15:14:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-19</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>开始更数据结构与算法部分的学习笔记了。开头带[Geek笔记]的都是“极客时间”专栏的学习笔记，其它的则是从教材、习题、acm等而来，基本上都会有这种前缀。 事实上这个更新本来会来的更慢，然而我再一次“被迫”去计算某算法的复杂度。那就只好提前开始了（其实早就该开始了…) 首先从一段最简单的代码开始：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cal</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (; i &lt;= n; ++i) &#123;</span><br><span class="line">        sum = sum + i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2018/10/19/complexity-1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Geek笔记//" class="article-tag-list-link color2">Geek笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/10/19/complexity-1/">展开全文 >></a>
     </p>
     
 
