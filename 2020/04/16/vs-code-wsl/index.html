@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="一颗仙人掌">
 <meta property="og:description" content="安装子系统1.启用功能首先在搜索栏中搜索并打开“启用或关闭Windows功能”，勾选“适用于Linux的Windows子系统”项。只有开启这项设置才能正常安装WSL。 2. 安装在Microsoft Store中搜索WSL，选择合适的版本安装（例如Ubuntu18.04）。 3. 文件位置如果想在 Linux 查看Windows中的分区，WSL 将其它盘符挂载在 /mnt 下。 如果想在 Wind">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-16T09:50:13.566Z">
+<meta property="og:updated_time" content="2020-04-16T10:34:33.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在VS Code中使用WSL">
 <meta name="twitter:description" content="安装子系统1.启用功能首先在搜索栏中搜索并打开“启用或关闭Windows功能”，勾选“适用于Linux的Windows子系统”项。只有开启这项设置才能正常安装WSL。 2. 安装在Microsoft Store中搜索WSL，选择合适的版本安装（例如Ubuntu18.04）。 3. 文件位置如果想在 Linux 查看Windows中的分区，WSL 将其它盘符挂载在 /mnt 下。 如果想在 Wind">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">285字</span>
+      <span class="post-count">344字</span>
     </span>
   </span>
 
@@ -244,7 +244,8 @@
 <h4 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h4><p>在VS Code中安装Remote-WSL插件，安装完成后可以按<code>Shift+Ctrl+p</code>，输入Remote-WSL，选择New Window即可连接子系统。</p>
 <p>进入子系统后，再按照相应的语言插件（如Python、C/C++等）。</p>
 <h4 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h4><p>打开文件夹有两种方法。一种是在命令行/Terminal中启动WSL，进入到文件夹，输入<code>code .</code>即可启动。另一种是在VS Code的资源管理器中点击打开文件夹，输入路径。</p>
-
+<h2 id="WSL更换apt源"><a href="#WSL更换apt源" class="headerlink" title="WSL更换apt源"></a>WSL更换apt源</h2><p>在命令行/Terminal/VS Code终端中启动WSL，输入下列命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/security.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/archive.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
     
 
     
