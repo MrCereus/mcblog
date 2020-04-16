@@ -317,6 +317,9 @@
 <h4 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h4><p>打开文件夹有两种方法。一种是在命令行/Terminal中启动WSL，进入到文件夹，输入<code>code .</code>即可启动。另一种是在VS Code的资源管理器中点击打开文件夹，输入路径。</p>
 <h2 id="WSL更换apt源"><a href="#WSL更换apt源" class="headerlink" title="WSL更换apt源"></a>WSL更换apt源</h2><p>在命令行/Terminal/VS Code终端中启动WSL，输入下列命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/security.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/archive.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<p>之后就可以使用阿里云镜像安装软件了。</p>
+
     
 
     
