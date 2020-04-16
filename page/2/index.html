@@ -185,6 +185,98 @@
             
 
   
+    <article id="post-complexity-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2018/10/20/complexity-2/" target="_blank"> [Geek笔记]复杂度分析（二）：一些栗子		</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2018/10/20/complexity-2/" class="archive-article-date">
+        <time datetime="2018-10-20T03:34:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面看看几种常见的多项式时间复杂度。 1.O(1) 这里的”1”指的不是只有一行代码，而是理解成随着n的增大，每个语句所只执行1次。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">8</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">int</span> sum = i + j;</span><br></pre></td></tr></table></figure>
+
+<p>这里有三行代码，但它的时间复杂度仍然是O(1)，不是O(3)。也就是说，无论n是1000、10000、甚至是更大，它的时间复杂度仍然是O(1)而不是O(n)。一般来说，只要算法中不存在循环、递归，其时间复杂度就是O(1)。 2.O(logn)、O(nlogn) 还是举个栗子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt;= n)  &#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2018/10/20/complexity-2/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Geek笔记//" class="article-tag-list-link color2">Geek笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2018/10/20/complexity-2/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-complexity-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

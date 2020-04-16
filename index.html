@@ -278,6 +278,88 @@
 
 
   
+    <article id="post-vs-code-wsl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/04/16/vs-code-wsl/" target="_blank">在VS Code中使用WSL</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/04/16/vs-code-wsl/" class="archive-article-date">
+        <time datetime="2020-04-16T09:35:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="安装子系统"><a href="#安装子系统" class="headerlink" title="安装子系统"></a>安装子系统</h2><h4 id="1-启用功能"><a href="#1-启用功能" class="headerlink" title="1.启用功能"></a>1.启用功能</h4><p>首先在搜索栏中搜索并打开“启用或关闭Windows功能”，勾选“适用于Linux的Windows子系统”项。只有开启这项设置才能正常安装WSL。</p>
+<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><p>在Microsoft Store中搜索WSL，选择合适的版本安装（例如Ubuntu18.04）。</p>
+<h4 id="3-文件位置"><a href="#3-文件位置" class="headerlink" title="3. 文件位置"></a>3. 文件位置</h4><p>如果想在 Linux 查看Windows中的分区，WSL 将其它盘符挂载在 /mnt 下。</p>
+<p>如果想在 Windows 下查看 WSL 文件位置，文件位置在：<code>C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs</code> 下。</p>
+<h2 id="安装VS-Code"><a href="#安装VS-Code" class="headerlink" title="安装VS Code"></a>安装VS Code</h2><h4 id="1-官网安装"><a href="#1-官网安装" class="headerlink" title="1. 官网安装"></a>1. 官网安装</h4><p>到VS Code官网<a href="https://code.visualstudio.com/，选择合适的版本安装。" target="_blank" rel="noopener">https://code.visualstudio.com/，选择合适的版本安装。</a></p>
+<h4 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h4><p>在VS Code中安装Remote-WSL插件，安装完成后可以按<code>Shift+Ctrl+p</code>，输入Remote-WSL，选择New Window即可连接子系统。</p>
+<p>进入子系统后，再按照相应的语言插件（如Python、C/C++等）。</p>
+<h4 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h4><p>打开文件夹有两种方法。一种是在命令行/Terminal中启动WSL，进入到文件夹，输入<code>code .</code>即可启动。另一种是在VS Code的资源管理器中点击打开文件夹，输入路径。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/04/16/vs-code-wsl/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ubuntu-switch-pyversion" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -998,98 +1080,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2018/10/21/complexity-3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-complexity-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/10/20/complexity-2/" target="_blank"> [Geek笔记]复杂度分析（二）：一些栗子		</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/10/20/complexity-2/" class="archive-article-date">
-        <time datetime="2018-10-20T03:34:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>上一篇文章中讲到，通过大O来表示时间复杂度。常见的复杂度有以下几种： 常量阶O(1)、对数阶O(logn)、线性阶O(n)、线性对数阶O(nlogn)、k次方阶O(n^k)、指数阶O(2ⁿ)、阶乘阶O(n!)。 我们可以将上述量级分为两类：多项式量级和非多项式量级。其中只有指数阶和阶乘阶为非多项式量级。当数据规模越来越大时，非多项式量级算法执行时间将急剧增长，这种算法是非常低效的，一般不使用。下面看看几种常见的多项式时间复杂度。 1.O(1) 这里的”1”指的不是只有一行代码，而是理解成随着n的增大，每个语句所只执行1次。例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i = <span class="number">8</span>;</span><br><span class="line"><span class="keyword">int</span> j = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">int</span> sum = i + j;</span><br></pre></td></tr></table></figure>
-
-<p>这里有三行代码，但它的时间复杂度仍然是O(1)，不是O(3)。也就是说，无论n是1000、10000、甚至是更大，它的时间复杂度仍然是O(1)而不是O(n)。一般来说，只要算法中不存在循环、递归，其时间复杂度就是O(1)。 2.O(logn)、O(nlogn) 还是举个栗子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i &lt;= n)  &#123;</span><br><span class="line">    i = i * <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2018/10/20/complexity-2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Geek笔记//" class="article-tag-list-link color2">Geek笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/10/20/complexity-2/">展开全文 >></a>
     </p>
     
 
