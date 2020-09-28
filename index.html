@@ -278,6 +278,99 @@
 
 
   
+    <article id="post-d3-js-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/09/27/d3-js-1/" target="_blank">【D3学习笔记】1：第一个上手的小界面</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/09/27/d3-js-1/" class="archive-article-date">
+        <time datetime="2020-09-27T13:10:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="又是Hello-World"><a href="#又是Hello-World" class="headerlink" title="又是Hello World"></a>又是Hello World</h2><p>第一段代码，从实现一个小功能开始，即改变页面上的元素。</p>
+<p>在HTML中输出”Hello World”:  </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用D3修改p标签中的元素：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://d3js.org/d3.v5.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="vbscript">        d3.<span class="keyword">select</span>(<span class="string">"body"</span>).<span class="keyword">select</span>(<span class="string">"p"</span>).text(<span class="string">"HelloD3World"</span>);      </span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    
+    <a class="article-more-a" href="/2020/09/27/d3-js-1/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/D3//" class="article-tag-list-link color3">D3</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/09/27/d3-js-1/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-d3-js-0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -992,98 +1085,6 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2019/10/07/hexo-ghp-cdn/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-linear-sequence" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/10/24/linear-sequence/" target="_blank"> [数据结构-教材示例]线性表（一）：顺序表		</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2018/10/24/linear-sequence/" class="archive-article-date">
-        <time datetime="2018-10-23T16:15:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="一-预定义"><a href="#一-预定义" class="headerlink" title="一 预定义"></a>一 预定义</h2><p>本书当中的预定义：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br></pre></td></tr></table></figure>
-
-<p>顺序表中的预定义：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LIST_INIT_SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LISTINCREMENT 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">    <span class="keyword">char</span> *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">equalChar</span><span class="params">(<span class="keyword">char</span> a, <span class="keyword">char</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a == b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2018/10/24/linear-sequence/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/教材示例//" class="article-tag-list-link color5">教材示例</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/10/24/linear-sequence/">展开全文 >></a>
     </p>
     
 
