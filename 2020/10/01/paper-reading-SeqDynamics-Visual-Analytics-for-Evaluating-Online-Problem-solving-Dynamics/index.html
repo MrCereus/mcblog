@@ -6,21 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.mrcactus.cn">
-  <title>【D3学习笔记】1：第一个上手的小界面 | 一颗仙人掌</title>
+  <title>【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics | 一颗仙人掌</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="又是Hello World第一段代码，从实现一个小功能开始，即改变页面上的元素。 在HTML中输出”Hello World”:   123456789&amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;         &amp;lt;title&amp;gt;HelloWorld&amp;lt;/title&amp;gt;     &amp;lt;/hea">
+  <meta name="description" content="基本信息 论文： SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics 作者： Meng Xia , Min Xu, Chuan-en Lin, Ta Ying Cheng, Huamin Qu, Xiaojuan Ma 来源： Computer Graphics Forum 原文链接   EGEV2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【D3学习笔记】1：第一个上手的小界面">
-<meta property="og:url" content="https://blog.mrcactus.cn/2020/09/27/d3-js-1/index.html">
+<meta property="og:title" content="【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics">
+<meta property="og:url" content="https://blog.mrcactus.cn/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/index.html">
 <meta property="og:site_name" content="一颗仙人掌">
-<meta property="og:description" content="又是Hello World第一段代码，从实现一个小功能开始，即改变页面上的元素。 在HTML中输出”Hello World”:   123456789&amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;         &amp;lt;title&amp;gt;HelloWorld&amp;lt;/title&amp;gt;     &amp;lt;/hea">
+<meta property="og:description" content="基本信息 论文： SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics 作者： Meng Xia , Min Xu, Chuan-en Lin, Ta Ying Cheng, Huamin Qu, Xiaojuan Ma 来源： Computer Graphics Forum 原文链接   EGEV2">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-09-28T14:23:47.521Z">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf1.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf2.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf3.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf4.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf5.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf6.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf7.png">
+<meta property="og:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf8.png">
+<meta property="og:updated_time" content="2020-10-08T09:08:49.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【D3学习笔记】1：第一个上手的小界面">
-<meta name="twitter:description" content="又是Hello World第一段代码，从实现一个小功能开始，即改变页面上的元素。 在HTML中输出”Hello World”:   123456789&amp;lt;html&amp;gt;     &amp;lt;head&amp;gt;         &amp;lt;meta charset=&quot;utf-8&quot;&amp;gt;         &amp;lt;title&amp;gt;HelloWorld&amp;lt;/title&amp;gt;     &amp;lt;/hea">
+<meta name="twitter:title" content="【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics">
+<meta name="twitter:description" content="基本信息 论文： SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics 作者： Meng Xia , Min Xu, Chuan-en Lin, Ta Ying Cheng, Huamin Qu, Xiaojuan Ma 来源： Computer Graphics Forum 原文链接   EGEV2">
+<meta name="twitter:image" content="https://blog.mrcactus.cn/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf1.png">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -183,14 +192,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-d3-js-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      【D3学习笔记】1：第一个上手的小界面
+      【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics
     </h1>
   
 
@@ -202,8 +211,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/09/27/d3-js-1/" class="archive-article-date">
-        <time datetime="2020-09-27T13:10:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+<a href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" class="archive-article-date">
+        <time datetime="2020-10-01T08:28:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-01</time>
 </a>
 
   
@@ -216,7 +225,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">510字</span>
+      <span class="post-count">1.6k字</span>
     </span>
   </span>
 
@@ -225,7 +234,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">2分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -236,25 +245,79 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="又是Hello-World"><a href="#又是Hello-World" class="headerlink" title="又是Hello World"></a>又是Hello World</h2><p>第一段代码，从实现一个小功能开始，即改变页面上的元素。</p>
-<p>在HTML中输出”Hello World”:  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用D3修改p标签中的元素：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://d3js.org/d3.v5.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="vbscript">        d3.<span class="keyword">select</span>(<span class="string">"body"</span>).<span class="keyword">select</span>(<span class="string">"p"</span>).text(<span class="string">"HelloD3World"</span>);      </span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+    <h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><ul>
+<li><strong>论文</strong>： SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics</li>
+<li><strong>作者</strong>： Meng Xia , Min Xu, Chuan-en Lin, Ta Ying Cheng, Huamin Qu, Xiaojuan Ma</li>
+<li><strong>来源</strong>： Computer Graphics Forum</li>
+<li><a href="https://diglib.eg.org/bitstream/handle/10.1111/cgf13998/v39i3pp511-522.pdf" target="_blank" rel="noopener">原文链接</a>  </li>
+<li><a href="https://www.youtube.com/watch?v=0iFe5gGvIrU" target="_blank" rel="noopener">EGEV2020视频 42’36’’起</a></li>
+</ul>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在高校选拔人才及IT公司面试的场景中，通常需要从大量的申请者中选拔出最顶尖的人才。在这个过程中，面试官不仅需要考虑候选者的认知能力（例如思考、阅读、学习、记忆、逻辑及注意力等），还要考虑更多的非认知特性（例如积极性、责任心、耐心、自律能力及协作能力等）。</p>
+<p>在现有的评价体系中，通常包含一个考试或者技术面试，但有些技能和特性，特别是那些非认知特性，只能通过观察候选人长期的行为和表现才能知晓。一些知名的在线教育平台，例如Khan Academy、及在线编程平台LeetCode等，都收集了大量关于用户的详细数据，包括用户在习题和作业上的表现等，这提供了分析用户认知和非认知能力的机会。</p>
+<p>解决问题的动态（Problem-solving Dynamics），是指随着时间的推移解决一系列问题的过程。我们可以根据所解决问题的难度水平的变化得出学生的学习曲线，或者基于随时间推移解决问题的频率得出学生的自我调节模式。因此，可以通过评估候选者解决问题的动态来更好地进行筛选。</p>
+<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><ul>
+<li>每个学习者的问题解决动态都是多维时间序列数据，如何用有意义的语义来表示和解释这些数据，以反映认知和非认知的特征和行为是非常重要的。</li>
+<li>评价过程通常涉及大量学习者解决问题顺序的比较。</li>
+<li>缺乏对“好的”问题解决动态的标准定义，不同的人对这个标准有不同的理解。</li>
+</ul>
+<p>本文介绍了 SeqDynamics，一个交互式的虚拟分析系统，供教师全面检查和评估学习者的问题解决动态。SeqDynamics 自动从三个细节层次总结和分析问题解决动态:学习者排名、问题解决的概要特征(解决的问题数量、解决的难题百分比、问题类型的多样性、提交的数量、开始尝试困难问题的时间和活跃天数的百分比)，以及这些特征随时间的变化。</p>
+<h3 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h3><ul>
+<li>Interactive System：一个交互式视觉分析系统，供教师评估学习者解决问题的能力，并在多个尺度(宏观-中观-微观)上选择候选人。</li>
+<li>Visualization Designs：一套新颖的视觉设计，从认知和非认知两个方面再现问题解决的动态，以促进对问题解决顺序的理解和比较。</li>
+<li>Evaluation：三个场景展示了 SeqDynamics 在真实数据集上的实用性，五个专家访谈显示 SeqDynamics 增强了他们的评估流程。</li>
+</ul>
 <a id="more"></a>
 
-<h2 id="选择元素"><a href="#选择元素" class="headerlink" title="选择元素"></a>选择元素</h2><p>在 D3 中，用于选择元素的函数有两个，这两个函数返回的结果称为选择集。<br><code>d3.select()</code>：选择所有指定元素的第一个<br><code>d3.selectAll()</code>：选择指定全部元素</p>
-<p>常见的选择集用法：  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> body = d3.select(<span class="string">"body"</span>); <span class="comment">//选择文档中的body元素</span></span><br><span class="line"><span class="keyword">var</span> p1 = body.select(<span class="string">"p"</span>);      <span class="comment">//选择body中的第一个p元素</span></span><br><span class="line"><span class="keyword">var</span> p = body.selectAll(<span class="string">"p"</span>);    <span class="comment">//选择body中的所有p元素</span></span><br><span class="line"><span class="keyword">var</span> svg = body.select(<span class="string">"svg"</span>);   <span class="comment">//选择body中的svg元素</span></span><br><span class="line"><span class="keyword">var</span> rects = svg.selectAll(<span class="string">"rect"</span>);  <span class="comment">//选择svg中所有的rect元素</span></span><br><span class="line"><span class="keyword">var</span> id = body.select(<span class="string">"#id"</span>); <span class="comment">//选择body中id元素</span></span><br><span class="line"><span class="keyword">var</span> <span class="class"><span class="keyword">class</span> </span>= body.select(<span class="string">".class"</span>);<span class="comment">//选择body中class类元素</span></span><br></pre></td></tr></table></figure>
+<h2 id="系统设计需求"><a href="#系统设计需求" class="headerlink" title="系统设计需求"></a>系统设计需求</h2><p>由专家提出。</p>
+<ul>
+<li>对学生整体解决问题的表现有一个清晰的概述。</li>
+<li>随着时间的推移，从不同的角度理解解决问题的动态。</li>
+<li>比较/综合不同尺度下解决问题的表现。</li>
+<li>支持交互和自定义的评估系统。</li>
+</ul>
+<h2 id="系统概览"><a href="#系统概览" class="headerlink" title="系统概览"></a>系统概览</h2><p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf1.png" alt="Figure 1"></p>
+<ul>
+<li>数据收集和预处理模块，负责收集数据并对原始数据进行预处理。</li>
+<li>数据分析模块，通过学生的认知及非认知能力，来对解决问题的属性进行计算。</li>
+<li>可视化模块，通过多种视图来对解决问题的动态的比较及解释提供支持。</li>
+<li>交互模块，对用户的交互动作进行响应。</li>
+</ul>
+<h2 id="解决问题的动态分析"><a href="#解决问题的动态分析" class="headerlink" title="解决问题的动态分析"></a>解决问题的动态分析</h2><p>文章从认知和非认知角度建立解决问题的属性。</p>
+<p>考虑三个学习属性来评估个体的认知技能：</p>
+<ul>
+<li>解决的问题数量(l1)</li>
+<li>解决的难题的百分比(l2)</li>
+<li>解决的问题的多样性(l3)</li>
+</ul>
+<p>考虑三个学习属性来评估个体的非认知特性：</p>
+<ul>
+<li>勤奋(提交的总数(l4))</li>
+<li>愿意接受挑战(开始解决难题的时间(l5))</li>
+<li>恒心 (活跃天数/ 注册后天数) (I6)</li>
+</ul>
+<h2 id="系统设计任务"><a href="#系统设计任务" class="headerlink" title="系统设计任务"></a>系统设计任务</h2><ul>
+<li>显示学习者解决问题的总体表现分布</li>
+<li>从认知和非认知方面直观地解释了学生的主要学习属性</li>
+<li>根据学生解决问题的主要特点，促进学生之间的比较</li>
+<li>详细分析学生解决问题的时间序列动力学</li>
+<li>促进问题解决动态的详细比较和互补</li>
+<li>通过调整属性权重从不同角度检查候选人</li>
+</ul>
+<h2 id="可视化设计"><a href="#可视化设计" class="headerlink" title="可视化设计"></a>可视化设计</h2><h3 id="1-Ranking-View"><a href="#1-Ranking-View" class="headerlink" title="1. Ranking View"></a>1. Ranking View</h3><p>排名视图的作用是提供一个对所有候选者表现的宏观描述。使用ELO算法对候选者进行排名。其中答题者与题目为博弈的双方。</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf2.png" alt="Figure 2"></p>
+<h3 id="2-Projection-View-and-Correlation-Panel"><a href="#2-Projection-View-and-Correlation-Panel" class="headerlink" title="2. Projection View and Correlation Panel"></a>2. Projection View and Correlation Panel</h3><h4 id="Correlation-Panel"><a href="#Correlation-Panel" class="headerlink" title="Correlation Panel"></a>Correlation Panel</h4><p>相关性面板主要有两个功能：1）展示ELO排名和不同解决问题的属性之间的关系；2）给导师提供一个调整不同属性权重的方式。六个正方形代表了上面所提到的六个不同属性，其中上色区域的面积比例表示该属性与ELO排名之间的关联程度，数字表示权重。上方的条形图用来调整各个属性的权重。</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf3.png" alt="Figure 3"></p>
+<h4 id="Learner-Glyph"><a href="#Learner-Glyph" class="headerlink" title="Learner Glyph"></a>Learner Glyph</h4><p>设计了一种Learner Glyph，来展示上述的六种属性，具体如图：</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf4.png" alt="Figure 4"></p>
+<h3 id="3-Evolution-View"><a href="#3-Evolution-View" class="headerlink" title="3. Evolution View"></a>3. Evolution View</h3><p>该部分的目的是从微观角度展示用户的解决问题的动态。具体如下：</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf5.png" alt="Figure 5"></p>
+<h3 id="4-Comparison-Cooperation-View"><a href="#4-Comparison-Cooperation-View" class="headerlink" title="4. Comparison/Cooperation View"></a>4. Comparison/Cooperation View</h3><p>该部分旨在提供两位候选者之间的对比，以及他们能力的互补情况。具体如图：</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf6.png" alt="Figure 6"></p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf7.png" alt="Figure 7"></p>
+<h2 id="方案拓展"><a href="#方案拓展" class="headerlink" title="方案拓展"></a>方案拓展</h2><p>可以将此方案拓展至其它领域，例如电竞、体育、桌游等。下面给出一个电竞的例子。</p>
+<p><img src="/.cn//C:%5CUsers%5Cmecer%5COneDrive%5C%E6%A1%8C%E9%9D%A2%5C%E8%AE%BA%E6%96%87%5Cf8.png" alt="Figure 8"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本方案提出了较为新颖的评价方式，将非认知属性也加入其中，并设计了一种可视方案。该方案具有较好的直观性、交互性以及可拓展性，较为适合专家使用。</p>
 
-<h2 id="绑定数据"><a href="#绑定数据" class="headerlink" title="绑定数据"></a>绑定数据</h2><p>选择集和绑定数据通常是一起使用的，D3 中是通过以下两个函数来绑定数据的：<br>datum()：绑定一个数据到选择集上<br>data()：绑定一个数组到选择集上，数组的各项值分别与选择集的各元素绑定</p>
-<p>对于datum():假设有一字符串 HelloD3World，要将此字符串分别与三个段落元素绑定：  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"HelloD3World"</span>;</span><br><span class="line"><span class="keyword">var</span> body = d3.select(<span class="string">"body"</span>);</span><br><span class="line"><span class="keyword">var</span> p = body.selectAll(<span class="string">"p"</span>);</span><br><span class="line">p.datum(str);</span><br><span class="line">p.text(<span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"第 "</span>+ i + <span class="string">" 个元素绑定的数据是 "</span> + d;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<p>对于data():有一个数组，接下来要分别将数组的各元素绑定到三个段落元素上。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataset = [<span class="string">"sun"</span>,<span class="string">"moon"</span>,<span class="string">"you"</span>];</span><br><span class="line"><span class="keyword">var</span> body = d3.select(<span class="string">"body"</span>);</span><br><span class="line"><span class="keyword">var</span> p = body.selectAll(<span class="string">"p"</span>);</span><br><span class="line"></span><br><span class="line">p.data(dataset)</span><br><span class="line">  .text(<span class="function"><span class="keyword">function</span>(<span class="params">d, i</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">"I love "</span> + d;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
     
 
     
@@ -300,7 +363,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https://blog.mrcactus.cn/2020/09/27/d3-js-1/" title="【D3学习笔记】1：第一个上手的小界面" target="_blank">https://blog.mrcactus.cn/2020/09/27/d3-js-1/</a>
+          <a href="https://blog.mrcactus.cn/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" title="【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics" target="_blank">https://blog.mrcactus.cn/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/</a>
         </li>
         <li>
           <strong>版权声明： </strong>
@@ -320,7 +383,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/D3//" class="article-tag-list-link color3">D3</a>
+        			<a href="/categories/论文阅读笔记//" class="article-tag-list-link color2">论文阅读笔记</a>
         		</li>
       		
 		</ul>
@@ -375,7 +438,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blog.mrcactus.cn/2020/09/27/d3-js-1/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blog.mrcactus.cn/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -390,18 +453,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/26/d3-js-0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">【D3学习笔记】0：简介与安装</div>
+    <a href="/2020/09/27/d3-js-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">【D3学习笔记】1：第一个上手的小界面</div>
       <i class="icon-circle-right"></i>
     </a>
   
