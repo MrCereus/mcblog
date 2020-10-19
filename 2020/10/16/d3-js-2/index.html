@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://blog.mrcactus.cn">
-  <title>一颗仙人掌</title>
+  <title>【D3学习笔记】2：数据 | 一颗仙人掌</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <meta name="keywords" content="">
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="一颗仙人掌">
-<meta property="og:url" content="https://blog.mrcactus.cn/index.html">
+  <meta name="description" content="本篇中部分内容在上一篇也有提及，这里系统谈谈数据。 生成页面元素连缀方法D3使用了与jQuery类似的连缀语法，通过句点将各个方法连在了一起。举例： 12345678910111213d3.select(&quot;body&quot;).append(&quot;p&quot;).text(&quot;New paragraph&quot;);// 或者d3.select(&quot;body&quot;) //引用D3对象，向select方法传入一个CSS选择符作为输入，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【D3学习笔记】2：数据">
+<meta property="og:url" content="https://blog.mrcactus.cn/2020/10/16/d3-js-2/index.html">
 <meta property="og:site_name" content="一颗仙人掌">
+<meta property="og:description" content="本篇中部分内容在上一篇也有提及，这里系统谈谈数据。 生成页面元素连缀方法D3使用了与jQuery类似的连缀语法，通过句点将各个方法连在了一起。举例： 12345678910111213d3.select(&quot;body&quot;).append(&quot;p&quot;).text(&quot;New paragraph&quot;);// 或者d3.select(&quot;body&quot;) //引用D3对象，向select方法传入一个CSS选择符作为输入，">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-10-19T13:06:47.719Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一颗仙人掌">
+<meta name="twitter:title" content="【D3学习笔记】2：数据">
+<meta name="twitter:description" content="本篇中部分内容在上一篇也有提及，这里系统谈谈数据。 生成页面元素连缀方法D3使用了与jQuery类似的连缀语法，通过句点将各个方法连在了一起。举例： 12345678910111213d3.select(&quot;body&quot;).append(&quot;p&quot;).text(&quot;New paragraph&quot;);// 或者d3.select(&quot;body&quot;) //引用D3对象，向select方法传入一个CSS选择符作为输入，">
   
     <link rel="alternative" href="/atom.xml" title="一颗仙人掌" type="application/atom+xml">
   
@@ -182,247 +183,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-hello-world-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-d3-js-2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2018/05/19/hello-world-1/" target="_blank"> 欢迎=-=		</a>
-  
+    <h1 class="article-title" itemprop="name">
+      【D3学习笔记】2：数据
     </h1>
   
 
 
   
   
-<a href="/2018/05/19/hello-world-1/" class="archive-article-date">
-        <time datetime="2018-05-19T01:30:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-19</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>现在的我并不打算备案了..有点麻烦.. （10.10更新 我已经备完案了。。）</p>
-<p>无论如何，欢迎你来访问我的主页！</p>
-<p>一般情况下会更新一些见到的题目啊代码啊之类的.. 也会抽时间写一点心得啊总结啊之类的吧.. 希望能坚持下来。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    <div class="article-pop-out tagcloud">
-      <i class="icon-tuding"></i>
-      <a class="article-tag-list-link color3">置顶</a>
-    </div>
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/欢迎！//" class="article-tag-list-link color4">欢迎！</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2018/05/19/hello-world-1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-
-
-  
-    <article id="post-d3-js-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/18/d3-js-3/" target="_blank">【D3学习笔记】3：基于数据绘图</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/18/d3-js-3/" class="archive-article-date">
-        <time datetime="2020-10-18T07:25:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-18</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="绘制DIV"><a href="#绘制DIV" class="headerlink" title="绘制DIV"></a>绘制DIV</h2><h3 id="设定属性"><a href="#设定属性" class="headerlink" title="设定属性"></a>设定属性</h3><p><code>attr()</code>用于设定HTML元素的属性和值。对下面的标签：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"caption"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"country"</span>&gt;</span><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"logo.png"</span> <span class="attr">width</span>=<span class="string">"100px"</span> <span class="attr">alt</span>=<span class="string">"Logo"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>总共包含5个属性和值：</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>class</td>
-<td>caption</td>
-</tr>
-<tr>
-<td>id</td>
-<td>country</td>
-</tr>
-<tr>
-<td>src</td>
-<td>logo.png</td>
-</tr>
-<tr>
-<td>width</td>
-<td>100px</td>
-</tr>
-<tr>
-<td>alt</td>
-<td>Logo</td>
-</tr>
-</tbody></table>
-<p>这些属性都可以通过<code>attr()</code>方法来给定值：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.attr(<span class="string">"class"</span>,<span class="string">"bar"</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="关于类"><a href="#关于类" class="headerlink" title="关于类"></a>关于类</h3><p>通过<code>classed()</code>方法，可以从指定DOM中快速添加或删除类：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.class(<span class="string">"bar"</span>,<span class="literal">true</span>) <span class="comment">//添加</span></span><br><span class="line">.class(<span class="string">"bar"</span>,<span class="literal">false</span>) <span class="comment">//删除</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设定样式"><a href="#设定样式" class="headerlink" title="设定样式"></a>设定样式</h3><p>使用<code>style()</code>方法可以设定CSS样式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.style(<span class="string">"height"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> barHeight = d * <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">return</span> barHeight + <span class="string">"px"</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="根据数据自动拓展图表"><a href="#根据数据自动拓展图表" class="headerlink" title="根据数据自动拓展图表"></a>根据数据自动拓展图表</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">d3.select(<span class="string">"body"</span>).selectAll(<span class="string">"div"</span>) </span><br><span class="line">  .data(dataset)</span><br><span class="line">  .enter()</span><br><span class="line">  .append(<span class="string">"div"</span>)</span><br><span class="line">  .attr(<span class="string">"class"</span>,<span class="string">"bar"</span>)</span><br><span class="line">  .style(<span class="string">"height"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> barHeight = d * <span class="number">5</span>;</span><br><span class="line">      <span class="keyword">return</span> barHeight + <span class="string">"px"</span>;</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<p>传给<code>data()</code>方法的值的个数决定了它的循环次数。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/D3//" class="article-tag-list-link color3">D3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/18/d3-js-3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-d3-js-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/16/d3-js-2/" target="_blank">【D3学习笔记】2：数据</a>
-  
-    </h1>
-  
-
-
-  
-  
 <a href="/2020/10/16/d3-js-2/" class="archive-article-date">
         <time datetime="2020-10-16T11:43:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-16</time>
 </a>
@@ -430,6 +209,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">785字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -442,13 +242,94 @@
 
 <h3 id="逐个解析"><a href="#逐个解析" class="headerlink" title="逐个解析"></a>逐个解析</h3><p>对上面那一串代码逐个进行分析：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d3 <span class="comment">//引用D3对象</span></span><br><span class="line"></span><br><span class="line">.select(<span class="string">"body"</span>) <span class="comment">// 向select方法传入一个CSS选择符作为输入，返回一个对DOM中匹配的第一个元素的引用。</span></span><br><span class="line"></span><br><span class="line">.append(<span class="string">"p"</span>)  <span class="comment">// 创建一个指定的新DOM元素，然后将它追加到调用它的元素的末尾。</span></span><br><span class="line"></span><br><span class="line">.text(<span class="string">"New paragraph"</span>)  <span class="comment">// 接收一个字符串，插入到当前元素的开始和结束标签之间。</span></span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/10/16/d3-js-2/#more">more >></a>
-    
-    
+
+<a id="more"></a>
+
+<h2 id="绑定数据"><a href="#绑定数据" class="headerlink" title="绑定数据"></a>绑定数据</h2><h3 id="加载CSV数据"><a href="#加载CSV数据" class="headerlink" title="加载CSV数据"></a>加载CSV数据</h3><p>假设数据保存在food.csv中，则可以用<code>d3.csv()</code>方法来进行加载：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d3.csv(<span class="string">"food.csv"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>该方法接受两个参数，第一个是文件路径，第二个是回调函数。回调函数只有在把CSV文件加载到内存后才会执行。</p>
+<p>由于该方法是一个异步方法，为了保证调用其它函数前数据已完成加载，可以将读取的数据保存到一个全局变量中，并在回调函数中调用需要用到这些数据的其它函数。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataset;</span><br><span class="line">d3.csv(<span class="string">"food.csv"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    dataset = data;</span><br><span class="line">    generateVis(); <span class="comment">//该函数用到了dataset变量</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>可以在回调函数中增加一个error参数，来查看出错信息：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataset;</span><br><span class="line">d3.csv(<span class="string">"food.csv"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">error,data</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(error)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        dataset = data;</span><br><span class="line">    	generateVis(); <span class="comment">//该函数用到了dataset变量</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>如果数据是TSV格式，则使用<code>d3.tsv()</code>方法，其它方面与<code>d3.csv()</code>方法一致。</p>
+<h3 id="加载JSON数据"><a href="#加载JSON数据" class="headerlink" title="加载JSON数据"></a>加载JSON数据</h3><p>使用<code>d3.json()</code>方法可以加载JSON数据，后面会详细说明。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d3.json(<span class="string">"food.json"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">json</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(json);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="选择绑定的元素"><a href="#选择绑定的元素" class="headerlink" title="选择绑定的元素"></a>选择绑定的元素</h3><p>以一个数组为例：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> dataset = [ <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">25</span> ];</span><br></pre></td></tr></table></figure>
+
+<p>接下来，创建元素并将其与数据绑定：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">d3.select(<span class="string">"body"</span>).selectAll(<span class="string">"p"</span>) <span class="comment">//此时p元素还不存在</span></span><br><span class="line">  .data(dataset)</span><br><span class="line">  .enter()  <span class="comment">// 如果数据比对应的DOM元素多，则创建新的占位元素</span></span><br><span class="line">  .append(<span class="string">"p"</span>)  <span class="comment">// 取得由enter()创建的元素，并追加到相应的DOM中</span></span><br><span class="line">  .text(<span class="string">"New paragraph"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器的Console中可以查看绑定的数据：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(d3.selectAll(<span class="string">"p"</span>))</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用自己的数据"><a href="#使用自己的数据" class="headerlink" title="使用自己的数据"></a>使用自己的数据</h2><h3 id="自定义函数"><a href="#自定义函数" class="headerlink" title="自定义函数"></a>自定义函数</h3><p><code>text()</code>方法可以接受一个匿名函数的返回值作为参数，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.text(<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">return</span> <span class="string">"I can count up to "</span> + d; </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><code>attr()</code>、<code>style()</code>等方法也可以这么做。</p>
+<h3 id="添加样式"><a href="#添加样式" class="headerlink" title="添加样式"></a>添加样式</h3><p>上面提到的<code>attr()</code>、<code>style()</code>方法分别用来设置取得的元素的HTML属性和CSS属性。</p>
+<p>例如，动态为文本设置颜色：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.style(<span class="string">"color"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">d</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span>(d &gt; <span class="number">15</span>)&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">"red"</span>;</span><br><span class="line">   &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">"black"</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 
     
 
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechat.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Jacob Sheng
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https://blog.mrcactus.cn/2020/10/16/d3-js-2/" title="【D3学习笔记】2：数据" target="_blank">https://blog.mrcactus.cn/2020/10/16/d3-js-2/</a>
+        </li>
+        <li>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+      </ul>
+    </div>
     
 
   </div>
@@ -469,16 +350,85 @@
 
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/16/d3-js-2/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://blog.mrcactus.cn/2020/10/16/d3-js-2/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2020/10/18/d3-js-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          【D3学习笔记】3：基于数据绘图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/09/paper-reading-PEAX-Interactive-Visual-Pattern-Search/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">paper-reading-PEAX-Interactive-Visual-Pattern-Search</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -499,651 +449,14 @@
 
 
 
-  
-    <article id="post-paper-reading-PEAX-Interactive-Visual-Pattern-Search" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/09/paper-reading-PEAX-Interactive-Visual-Pattern-Search/" target="_blank">paper-reading-PEAX-Interactive-Visual-Pattern-Search</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2020/10/09/paper-reading-PEAX-Interactive-Visual-Pattern-Search/" class="archive-article-date">
-        <time datetime="2020-10-09T00:21:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-09</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/09/paper-reading-PEAX-Interactive-Visual-Pattern-Search/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" target="_blank">【论文阅读笔记】SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/" class="archive-article-date">
-        <time datetime="2020-10-01T08:28:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-01</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><ul>
-<li><strong>论文</strong>： SeqDynamics:Visual Analytics for Evaluating Online Problem-solving Dynamics</li>
-<li><strong>作者</strong>： Meng Xia , Min Xu, Chuan-en Lin, Ta Ying Cheng, Huamin Qu, Xiaojuan Ma</li>
-<li><strong>来源</strong>： Computer Graphics Forum</li>
-<li><a href="https://diglib.eg.org/bitstream/handle/10.1111/cgf13998/v39i3pp511-522.pdf" target="_blank" rel="noopener">原文链接</a>  </li>
-<li><a href="https://www.youtube.com/watch?v=0iFe5gGvIrU" target="_blank" rel="noopener">EGEV2020视频 42’36’’起</a></li>
-</ul>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>在高校选拔人才及IT公司面试的场景中，通常需要从大量的申请者中选拔出最顶尖的人才。在这个过程中，面试官不仅需要考虑候选者的认知能力（例如思考、阅读、学习、记忆、逻辑及注意力等），还要考虑更多的非认知特性（例如积极性、责任心、耐心、自律能力及协作能力等）。</p>
-<p>在现有的评价体系中，通常包含一个考试或者技术面试，但有些技能和特性，特别是那些非认知特性，只能通过观察候选人长期的行为和表现才能知晓。一些知名的在线教育平台，例如Khan Academy、及在线编程平台LeetCode等，都收集了大量关于用户的详细数据，包括用户在习题和作业上的表现等，这提供了分析用户认知和非认知能力的机会。</p>
-<p>解决问题的动态（Problem-solving Dynamics），是指随着时间的推移解决一系列问题的过程。我们可以根据所解决问题的难度水平的变化得出学生的学习曲线，或者基于随时间推移解决问题的频率得出学生的自我调节模式。因此，可以通过评估候选者解决问题的动态来更好地进行筛选。</p>
-<h3 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h3><ul>
-<li>每个学习者的问题解决动态都是多维时间序列数据，如何用有意义的语义来表示和解释这些数据，以反映认知和非认知的特征和行为是非常重要的。</li>
-<li>评价过程通常涉及大量学习者解决问题顺序的比较。</li>
-<li>缺乏对“好的”问题解决动态的标准定义，不同的人对这个标准有不同的理解。</li>
-</ul>
-<p>本文介绍了 SeqDynamics，一个交互式的虚拟分析系统，供教师全面检查和评估学习者的问题解决动态。SeqDynamics 自动从三个细节层次总结和分析问题解决动态:学习者排名、问题解决的概要特征(解决的问题数量、解决的难题百分比、问题类型的多样性、提交的数量、开始尝试困难问题的时间和活跃天数的百分比)，以及这些特征随时间的变化。</p>
-<h3 id="贡献"><a href="#贡献" class="headerlink" title="贡献"></a>贡献</h3><ul>
-<li>Interactive System：一个交互式视觉分析系统，供教师评估学习者解决问题的能力，并在多个尺度(宏观-中观-微观)上选择候选人。</li>
-<li>Visualization Designs：一套新颖的视觉设计，从认知和非认知两个方面再现问题解决的动态，以促进对问题解决顺序的理解和比较。</li>
-<li>Evaluation：三个场景展示了 SeqDynamics 在真实数据集上的实用性，五个专家访谈显示 SeqDynamics 增强了他们的评估流程。</li>
-</ul>
-    
-    <a class="article-more-a" href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/论文阅读笔记//" class="article-tag-list-link color2">论文阅读笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/01/paper-reading-SeqDynamics-Visual-Analytics-for-Evaluating-Online-Problem-solving-Dynamics/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-d3-js-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/09/27/d3-js-1/" target="_blank">【D3学习笔记】1：第一个上手的小界面</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/09/27/d3-js-1/" class="archive-article-date">
-        <time datetime="2020-09-27T13:10:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="又是Hello-World"><a href="#又是Hello-World" class="headerlink" title="又是Hello World"></a>又是Hello World</h2><p>第一段代码，从实现一个小功能开始，即改变页面上的元素。</p>
-<p>在HTML中输出”Hello World”:  </p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用D3修改p标签中的元素：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">html</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span>HelloWorld<span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://d3js.org/d3.v5.min.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Hello World<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="vbscript">        d3.<span class="keyword">select</span>(<span class="string">"body"</span>).<span class="keyword">select</span>(<span class="string">"p"</span>).text(<span class="string">"HelloD3World"</span>);      </span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/09/27/d3-js-1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/D3//" class="article-tag-list-link color3">D3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/09/27/d3-js-1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-d3-js-0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/09/26/d3-js-0/" target="_blank">【D3学习笔记】0：简介与安装</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/09/26/d3-js-0/" class="archive-article-date">
-        <time datetime="2020-09-26T14:02:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="D3简介"><a href="#D3简介" class="headerlink" title="D3简介"></a>D3简介</h2><p>D3 (或者叫 D3.js )是一个基于 web 标准的 JavaScript 可视化库，全称为 Data-Driven Documents ，即数据驱动的文档。 D3 可以借助 SVG, Canvas 以及 HTML 将你的数据生动的展现出来。 D3 结合了强大的可视化交互技术以及数据驱动 DOM 的技术，让你可以借助于现代浏览器的强大功能自由的对数据进行可视化。</p>
-<h2 id="与ECharts的区别"><a href="#与ECharts的区别" class="headerlink" title="与ECharts的区别"></a>与ECharts的区别</h2><p>ECharts 是百度团队开发的可视化库，其中封装了绝大多数常规图表，用户通过配置 options 参数，就可以轻松绘制制定的图表，具有较低的学习门槛。但也正因如此，该库的本质就是调用现成的绘图函数，自由度较差，很难做出开发者未封装的图表。</p>
-<p>而 D3 则更接近底层，自由度更高，可以自由设计不同类型的图表，与之对应的就是上手难度较高，对用户的基础有一定要求。</p>
-    
-    <a class="article-more-a" href="/2020/09/26/d3-js-0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/D3//" class="article-tag-list-link color3">D3</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/09/26/d3-js-0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-vs-code-wsl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/04/16/vs-code-wsl/" target="_blank">在VS Code中使用WSL</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/04/16/vs-code-wsl/" class="archive-article-date">
-        <time datetime="2020-04-16T09:35:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="安装子系统"><a href="#安装子系统" class="headerlink" title="安装子系统"></a>安装子系统</h2><h4 id="1-启用功能"><a href="#1-启用功能" class="headerlink" title="1.启用功能"></a>1.启用功能</h4><p>首先在搜索栏中搜索并打开“启用或关闭Windows功能”，勾选“适用于Linux的Windows子系统”项。只有开启这项设置才能正常安装WSL。</p>
-<h4 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h4><p>在Microsoft Store中搜索WSL，选择合适的版本安装（例如Ubuntu18.04）。</p>
-<h4 id="3-文件位置"><a href="#3-文件位置" class="headerlink" title="3. 文件位置"></a>3. 文件位置</h4><p>如果想在 Linux 查看Windows中的分区，WSL 将其它盘符挂载在 /mnt 下。</p>
-<p>如果想在 Windows 下查看 WSL 文件位置，文件位置在：<code>C:\Users\用户名\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs</code> 下。</p>
-<h2 id="安装VS-Code"><a href="#安装VS-Code" class="headerlink" title="安装VS Code"></a>安装VS Code</h2><h4 id="1-官网安装"><a href="#1-官网安装" class="headerlink" title="1. 官网安装"></a>1. 官网安装</h4><p>到<a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code官网</a>，选择合适的版本安装。</p>
-<h4 id="2-安装插件"><a href="#2-安装插件" class="headerlink" title="2. 安装插件"></a>2. 安装插件</h4><p>在VS Code中安装Remote-WSL插件，安装完成后可以按<code>Shift+Ctrl+p</code>，输入Remote-WSL，选择New Window即可连接子系统。</p>
-<p>进入子系统后，再按照相应的语言插件（如Python、C/C++等）。</p>
-<h4 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h4><p>打开文件夹有两种方法。一种是在命令行/Terminal中启动WSL，进入到文件夹，输入<code>code .</code>即可启动。另一种是在VS Code的资源管理器中点击打开文件夹，输入路径。</p>
-<h2 id="WSL更换apt源"><a href="#WSL更换apt源" class="headerlink" title="WSL更换apt源"></a>WSL更换apt源</h2><p>在命令行/Terminal/VS Code终端中启动WSL，输入下列命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/security.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo sed -i <span class="string">'s/archive.ubuntu/mirrors.aliyun/g'</span> /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
-
-<p>之后就可以使用阿里云镜像安装软件了。</p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/16/vs-code-wsl/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ubuntu-switch-pyversion" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/03/17/ubuntu-switch-pyversion/" target="_blank">Ubuntu更换Python3版本</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/03/17/ubuntu-switch-pyversion/" class="archive-article-date">
-        <time datetime="2020-03-17T08:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>在Ubuntu下更新Python3的大版本</p>
-<h4 id="查看Python版本"><a href="#查看Python版本" class="headerlink" title="查看Python版本"></a>查看Python版本</h4><p><code>python3 --version</code></p>
-<h4 id="安装新版Python"><a href="#安装新版Python" class="headerlink" title="安装新版Python"></a>安装新版Python</h4><p><code>sudo apt install python3.x</code></p>
-<h4 id="删除软连接"><a href="#删除软连接" class="headerlink" title="删除软连接"></a>删除软连接</h4><p><code>sudo rm -rf /usr/bin/python3</code>  </p>
-<p>如果安装过pip3<br><code>sudo rm -rf /usr/bin/pip3</code><br><code>sudo apt remove python3-pip</code></p>
-<h4 id="查看Python3-x路径"><a href="#查看Python3-x路径" class="headerlink" title="查看Python3.x路径"></a>查看Python3.x路径</h4><p><code>which python3.x</code></p>
-<p>一般为<code>/usr/bin/python3.x</code></p>
-<h4 id="添加软连接"><a href="#添加软连接" class="headerlink" title="添加软连接"></a>添加软连接</h4><p><code>sudo ln -s /usr/bin/python3.x /usr/bin/python3</code><br><code>sudo apt install python3-pip</code></p>
-<h4 id="查看pip3版本"><a href="#查看pip3版本" class="headerlink" title="查看pip3版本"></a>查看pip3版本</h4><p><code>pip3 -V</code></p>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器//" class="article-tag-list-link color4">服务器</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/17/ubuntu-switch-pyversion/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-lhy-ml-chap1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/03/09/lhy-ml-chap1/" target="_blank">[李宏毅机器学习]第一章-机器学习介绍</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/03/09/lhy-ml-chap1/" class="archive-article-date">
-        <time datetime="2020-03-09T10:19:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>开启一个新坑：台大李宏毅老师的机器学习课程</p>
-<h2 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a>什么是机器学习？</h2><p>机器学习，就是找到一个函数<code>f</code>，使得其输出结果符合我们的预期。如果我们有一组函数，则需要从其中找到最合适的一个。</p>
-<h2 id="机器学习的类别"><a href="#机器学习的类别" class="headerlink" title="机器学习的类别"></a>机器学习的类别</h2><h3 id="Supervised-Learning（监督学习）"><a href="#Supervised-Learning（监督学习）" class="headerlink" title="Supervised Learning（监督学习）"></a>Supervised Learning（监督学习）</h3><p>监督学习是指，输入的数据都是带有标签的，或者是带有分类的。</p>
-    
-    <a class="article-more-a" href="/2020/03/09/lhy-ml-chap1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/机器学习//" class="article-tag-list-link color5">机器学习</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/机器学习/李宏毅机器学习//" class="article-tag-list-link color3">李宏毅机器学习</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/09/lhy-ml-chap1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -1183,8 +496,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
