@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="一颗仙人掌">
 <meta property="og:description" content="Caddy安装：CADDY_TELEMETRY=on curl https://getcaddy.com | bash -s personal Caddyflie:新建路径：/etc/caddy，在其中新建Caddyfile 12345678YOURDOMAIN &amp;#123;             root /www              tls youemail@xxx.com">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-09T10:24:24.485Z">
+<meta property="og:updated_time" content="2021-07-06T11:22:18.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="v2ray+caddy+ws配置">
 <meta name="twitter:description" content="Caddy安装：CADDY_TELEMETRY=on curl https://getcaddy.com | bash -s personal Caddyflie:新建路径：/etc/caddy，在其中新建Caddyfile 12345678YOURDOMAIN &amp;#123;             root /www              tls youemail@xxx.com">
@@ -216,7 +216,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">129字</span>
+      <span class="post-count">1.2k字</span>
     </span>
   </span>
 
@@ -225,7 +225,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -248,6 +248,77 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"inbounds"</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"port"</span>:<span class="number">10086</span>,</span><br><span class="line">            <span class="attr">"listen"</span>:<span class="string">"127.0.0.1"</span>,</span><br><span class="line">            <span class="attr">"protocol"</span>:<span class="string">"vmess"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>:&#123;</span><br><span class="line">                <span class="attr">"clients"</span>:[</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>:<span class="string">"YOURUUID"</span>,</span><br><span class="line">                        <span class="attr">"alterId"</span>:<span class="number">64</span></span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">"streamSettings"</span>:&#123;</span><br><span class="line">                <span class="attr">"network"</span>:<span class="string">"ws"</span>,</span><br><span class="line">                <span class="attr">"wsSettings"</span>:&#123;</span><br><span class="line">                    <span class="attr">"path"</span>:<span class="string">"/v2ray"</span></span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">"tlsSettings"</span>:&#123;</span><br><span class="line">                    <span class="attr">"allowInsecure"</span>:<span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"outbounds"</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"protocol"</span>:<span class="string">"freedom"</span>,</span><br><span class="line">            <span class="attr">"settings"</span>:&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">        <span class="attr">"transport"</span>:&#123;</span><br><span class="line">        <span class="attr">"sockopt"</span>:&#123;</span><br><span class="line">            <span class="attr">"tcpFastOpen"</span>:<span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>service v2ray start/stop/restart/status</p>
+<h2 id="2021-7-6-更新"><a href="#2021-7-6-更新" class="headerlink" title="2021.7.6 更新"></a>2021.7.6 更新</h2><h1 id="快速构建-nginx-v2ray-ws-tls-科学上网"><a href="#快速构建-nginx-v2ray-ws-tls-科学上网" class="headerlink" title="快速构建 nginx + v2ray + ws + tls 科学上网"></a>快速构建 nginx + v2ray + ws + tls 科学上网</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想想上一篇文章还是 2019年度总结，其实前几个月写了很多东西，都记在 Typecho 里，没写博客。为什么呢？因为知识点太过零散，自觉不方便写成文章，顶多记一记笔记这样子。</p>
+<p>突然写这个是因为最近在 ruvds 租了一台机器用来挂给家里的 NAS 挂 bt 下载作代理用，因为移动不提供公网 ip，用 bt 下载速度太慢且几乎没有上传，我可不想一直做一个吸血鬼。</p>
+<p><a href="https://ruvds.com/" target="_blank" rel="noopener">ruvds</a>：一个月 60 卢布，6块钱左右，可以用万事达借记卡支付，很划算。</p>
+<h2 id="为什么使用-WebSocket-TLS"><a href="#为什么使用-WebSocket-TLS" class="headerlink" title="为什么使用 WebSocket + TLS"></a>为什么使用 WebSocket + TLS</h2><p>因为无论是 Vmess 亦或者 SS 协议，只要流量过大都会导致断流和封端口，遂只能另寻它路。Trojan 和 v2ray + ws 的伪装流量可以解决上述问题，这也就是这篇文章的由来。</p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
+<li>一台墙外的机器</li>
+<li>OS选择：Ubuntu / Debian / Centos</li>
+<li>一个域名</li>
+</ul>
+<h2 id="快速构建"><a href="#快速构建" class="headerlink" title="快速构建"></a>快速构建</h2><h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><p>下列命令均在 root 用户下进行（su root 或者 sudo -i）且使用 Debian 9 系统，Centos 需要一些改变</p>
+<ul>
+<li>nginx：提供网站服务</li>
+<li>v2ray：提供 socket 代理服务</li>
+<li>Certbot：自动配置证书，开启 tls</li>
+</ul>
+<h4 id="安装必要程序"><a href="#安装必要程序" class="headerlink" title="安装必要程序"></a>安装必要程序</h4><p>安装 nginx：apt update &amp;&amp; apt install -y nginx</p>
+<p>安装 v2ray：<a href="https://github.com/v2fly/fhs-install-v2ray/blob/master/README.zh-Hans-CN.md" target="_blank" rel="noopener">https://github.com/v2fly/fhs-install-v2ray/blob/master/README.zh-Hans-CN.md</a></p>
+<p>安装 Certbot：</p>
+<p>OS 不同，方法不同，参考 <a href="https://certbot.eff.org/" target="_blank" rel="noopener">https://certbot.eff.org/</a></p>
+<h4 id="配置-Nginx"><a href="#配置-Nginx" class="headerlink" title="配置 Nginx"></a>配置 Nginx</h4><p>先将域名解析到 vps 上，然后 cd 到 /etc/nginx/conf.d，添加文件 v2ray.conf，填入以下内容，文中 example.com 修改为你解析到 vps 的域名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">	server_name example.com;</span><br><span class="line">	root /var/www/ray;</span><br><span class="line">	location /ray &#123; # 与 V2Ray 配置中的 path 保持一致</span><br><span class="line">    if ($http_upgrade != &quot;websocket&quot;) &#123; # WebSocket协商失败时返回404</span><br><span class="line">        return 404;</span><br><span class="line">    &#125;</span><br><span class="line">    proxy_redirect off;</span><br><span class="line">    proxy_pass http://127.0.0.1:10086; # 假设WebSocket监听在环回地址的10000端口上</span><br><span class="line">    proxy_http_version 1.1;</span><br><span class="line">    proxy_set_header Upgrade $http_upgrade;</span><br><span class="line">    proxy_set_header Connection &quot;upgrade&quot;;</span><br><span class="line">    proxy_set_header Host $host;</span><br><span class="line">    # Show real IP in v2ray access.log</span><br><span class="line">    proxy_set_header X-Real-IP $remote_addr;</span><br><span class="line">    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;</span><br><span class="line">  &#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>填写完成后使用 nginx -t 测试语法是否正确，然后 systemctl restart nginx 重启服务，创建 /var/www/ray 这个目录，建一个 index.html 文件，内容随意</p>
+<h4 id="配置-Certbot"><a href="#配置-Certbot" class="headerlink" title="配置 Certbot"></a>配置 Certbot</h4><p>输入 certbot ，选择你的域名</p>
+<p>root@ip-172-26-6-133:/etc/nginx/conf.d# certbot</p>
+<p>Saving debug log to /var/log/letsencrypt/letsencrypt.log</p>
+<p>Plugins selected: Authenticator nginx, Installer nginx</p>
+<p>Which names would you like to activate HTTPS for?</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>1: ray.yukino.ch</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>Select the appropriate numbers separated by commas and/or spaces, or leave input</p>
+<p>blank to select all options shown (Enter ‘c’ to cancel): 1</p>
+<p>Obtaining a new certificate</p>
+<p>Performing the following challenges:</p>
+<p>http-01 challenge for ray.yukino.ch</p>
+<p>Waiting for verification…</p>
+<p>Cleaning up challenges</p>
+<p>Deploying Certificate to VirtualHost /etc/nginx/conf.d/v2ray.conf</p>
+<p>Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>1: No redirect - Make no further changes to the webserver configuration.</p>
+<p>2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for</p>
+<p>new sites, or if you’re confident your site works on HTTPS. You can undo this</p>
+<p>change by editing your web server’s configuration.</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>Select the appropriate number [1-2] then [enter] (press ‘c’ to cancel): 2</p>
+<p>Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/v2ray.conf</p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>Congratulations! You have successfully enabled <a href="https://ray.yukino.ch" target="_blank" rel="noopener">https://ray.yukino.ch</a></p>
+<p>You should test your configuration at:</p>
+<p><a href="https://www.ssllabs.com/ssltest/analyze.html?d=ray.yukino.ch" target="_blank" rel="noopener">https://www.ssllabs.com/ssltest/analyze.html?d=ray.yukino.ch</a></p>
+<p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+<p>IMPORTANT NOTES:</p>
+<p> - Congratulations! Your certificate and chain have been saved at:</p>
+<p>   /etc/letsencrypt/live/ray.yukino.ch/fullchain.pem</p>
+<p>   Your key file has been saved at:</p>
+<p>   /etc/letsencrypt/live/ray.yukino.ch/privkey.pem</p>
+<p>   Your cert will expire on 2020-09-17. To obtain a new or tweaked</p>
+<p>   version of this certificate in the future, simply run certbot again</p>
+<p>   with the “certonly” option. To non-interactively renew <em>all</em> of</p>
+<p>   your certificates, run “certbot renew”</p>
+<p> - If you like Certbot, please consider supporting our work by:</p>
+<p>   Donating to ISRG / Let’s Encrypt:   <a href="https://letsencrypt.org/donate" target="_blank" rel="noopener">https://letsencrypt.org/donate</a></p>
+<p>   Donating to EFF:                    <a href="https://eff.org/donate-le" target="_blank" rel="noopener">https://eff.org/donate-le</a></p>
+<p>至此，直接在浏览器访问你的域名应该可以看到 index.html 文件，如果没有，检查一下 80 / 443 端口是否打开了（telnet exmple.com 80）</p>
+<h4 id="配置-V2ray"><a href="#配置-V2ray" class="headerlink" title="配置 V2ray"></a>配置 V2ray</h4><p>修改 /etc/v2ray/config.json 文件， id 改为 你 <a href="https://www.uuidgenerator.net/" target="_blank" rel="noopener">生成</a> 的 UUID</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;inbounds&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;port&quot;: 10086,</span><br><span class="line">            &quot;listen&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">            &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">            &quot;settings&quot;: &#123;</span><br><span class="line">                &quot;clients&quot;: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        &quot;id&quot;: &quot;xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;,</span><br><span class="line">                        &quot;alterId&quot;: 64</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;streamSettings&quot;: &#123;</span><br><span class="line">                &quot;network&quot;: &quot;ws&quot;,</span><br><span class="line">                &quot;wsSettings&quot;: &#123;</span><br><span class="line">                    &quot;path&quot;: &quot;/ray&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    &quot;outbounds&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">            &quot;settings&quot;: &#123;&#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后 systemctl restart v2ray 重启 v2ray，至此所有内容配置完毕</p>
+<h4 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h4><p>客户端连接的时候设置 path 为 ray，开启底层传输安全（tls），地址即为你的域名，用户 id 即为你的 uuid</p>
 
     
 
@@ -438,7 +509,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018-2020 Jacob Sheng
+    		&copy; 2018-2021 Jacob Sheng
     	</div>
       	<div class="footer-right">
 			
